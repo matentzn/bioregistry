@@ -36,6 +36,8 @@ DOCS_IMG = DOCS.joinpath("img")
 
 EXPORT_DIRECTORY = ROOT.joinpath("exports")
 
+JSON_SCHEMA_PATH = EXPORT_DIRECTORY / "json_schema.md"
+
 EXPORT_CONTEXTS = EXPORT_DIRECTORY / "contexts"
 CONTEXT_BIOREGISTRY_PATH = EXPORT_CONTEXTS / "bioregistry.context.jsonld"
 SHACL_TURTLE_PATH = EXPORT_CONTEXTS / "bioregistry.context.ttl"
