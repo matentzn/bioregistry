@@ -6,6 +6,7 @@ import logging
 import typing
 from collections import Counter, defaultdict
 from functools import lru_cache
+from itertools import chain
 from pathlib import Path
 from typing import (
     Any,
@@ -29,7 +30,7 @@ from .constants import (
     MIRIAM_BLACKLIST,
 )
 from .license_standardizer import standardize_license
-from .schema import Registry, Resource, sanitize_model
+from .schema import Author, Collection, Registry, Resource, sanitize_model
 from .schema_utils import (
     _registry_from_path,
     read_metaregistry,
@@ -573,6 +574,42 @@ class Manager:
         if norm_prefix is None:
             return None
         return self.has_parts.get(norm_prefix, [])
+
+    def get_authors(self, prefix: str) -> List[Author]:
+        return []
+
+    def get_parts_dict(self) -> Mapping[str, Collection]:
+        """Get the full parent to parts dictionary."""
+        pre_rv = defaultdict(set)
+        for prefix, resource in self.registry.items():
+            if resource.part_of:
+                pre_rv[resource.part_of].add(prefix)
+        for key in pre_rv:
+            norm_key = self.normalize_prefix(key)
+            if norm_key is None:
+                continue
+            if norm_key != key:
+                raise ValueError(f"key doesn't match: {key} should be {norm_key}")
+            pre_rv[norm_key].add(norm_key)
+        rv = {}
+        for key, values in pre_rv.items():
+            resources = sorted(values)
+            authors = list(chain.from_iterable(self.get_authors(prefix) for prefix in resources))
+            resource = self.get_resource(key)
+            if resource is None:
+                name = f"Resources part of {key}"
+            else:
+                name = resource.get_name()
+            c = Collection(
+                identifier=key,
+                name=name,
+                resources=resources,
+                authors=authors,
+                description=f"A collection generated from part_of relations",
+            )
+            rv[key] = c
+
+        return rv
 
     def get_bioregistry_iri(self, prefix: str, identifier: str) -> Optional[str]:
         """Get a Bioregistry link.

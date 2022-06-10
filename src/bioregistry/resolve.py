@@ -8,7 +8,7 @@ from functools import lru_cache
 from typing import Any, Dict, List, Mapping, Optional, Set, Tuple, Union
 
 from .resource_manager import manager
-from .schema import Attributable, Resource
+from .schema import Attributable, Collection, Resource
 
 __all__ = [
     "get_resource",
@@ -57,6 +57,7 @@ __all__ = [
     "get_registry_invmap",
     "count_mappings",
     "get_versions",
+    "get_parts_dict",
 ]
 
 logger = logging.getLogger(__name__)
@@ -725,6 +726,10 @@ def get_has_parts(prefix: str) -> Optional[List[str]]:
     >>> assert 'chembl.compound' in get_has_parts('chembl')
     """
     return manager.get_has_parts(prefix)
+
+
+def get_parts_dict() -> Dict[str, Collection]:
+    return manager.get_parts_dict()
 
 
 def get_license(prefix: str) -> Optional[str]:

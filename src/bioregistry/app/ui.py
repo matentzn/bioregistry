@@ -66,9 +66,11 @@ def metaresources():
 @ui_blueprint.route("/collection/")
 def collections():
     """Serve the Bioregistry collection page."""
+    direct = [("direct", k, v) for k, v in bioregistry.read_collections().items()]
+    indirect = [("indirect", k, v) for k, v in bioregistry.get_parts_dict().items()]
     return render_template(
         "collections.html",
-        rows=bioregistry.read_collections().items(),
+        rows=[*direct, *indirect],
         markdown=markdown,
         formats=FORMATS,
     )

@@ -29,6 +29,7 @@ class TestRegistry(unittest.TestCase):
         """Set up the test case."""
         self.registry = bioregistry.read_registry()
         self.metaregistry = bioregistry.read_metaregistry()
+        self.collections = bioregistry.read_collections()
 
     def test_lint(self):
         """Test that the lint command was run.
@@ -738,4 +739,15 @@ class TestRegistry(unittest.TestCase):
                 self.assertTrue(
                     prefix in set(self.registry),
                     msg=f"mismatches.json has invalid prefix: {prefix}",
+                )
+
+    def test_collections_part_of(self):
+        """Test that all part_of entries in the bioregistry have a corresponding collection."""
+        part_of_to_identifier = bioregistry.get_collection_part_of()
+        for key, values in bioregistry.get_parts_dict().items():
+            with self.subTest(key=key, prefixes=",".join(values.resources)):
+                self.assertIn(
+                    key,
+                    part_of_to_identifier,
+                    msg=f"There is no collection annotated with the `part_of_key` for {key}",
                 )

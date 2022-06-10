@@ -1631,7 +1631,7 @@ class Collection(BaseModel):
     identifier: str = Field(
         ...,
         description="The collection's identifier",
-        regex=r"^\d{7}$",
+        # regex=r"^\d{7}$",
     )
     name: str = Field(
         ...,
@@ -1649,6 +1649,8 @@ class Collection(BaseModel):
         ...,
         description="A list of authors/contributors to the collection",
     )
+    #: Corresponds to the "part_of" field in resources
+    part_of_key: Optional[str]
     #: JSON-LD context name
     context: Optional[str]
 

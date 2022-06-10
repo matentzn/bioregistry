@@ -56,7 +56,7 @@
                 <td>Description</td>
             </tr>
             </thead>
-            {% for identifier, row in rows %}
+            {% for type, identifier, row in rows %}
                 <tr>
                     <td>
                         <a href="{{ url_for('ui.collection', identifier=identifier) }}">{{ row.name }}</a>

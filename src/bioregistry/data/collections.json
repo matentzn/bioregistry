@@ -117,6 +117,7 @@
       "description": "This collection contains the many prefixes for the different repackaging of the International Classification of Diseases (ICD) throughout its major revisions.",
       "identifier": "0000004",
       "name": "International Classifications of Diseases",
+      "part_of_key": "icd",
       "resources": [
         "icd10",
         "icd10cm",

@@ -2,7 +2,11 @@
 
 """Extract registry information."""
 
-from .collection_api import get_collection, get_context  # noqa:F401
+from .collection_api import (  # noqa:F401
+    get_collection,
+    get_collection_part_of,
+    get_context,
+)
 from .metaresource_api import (  # noqa:F401
     get_registry,
     get_registry_description,
@@ -56,6 +60,7 @@ from .resolve import (  # noqa:F401
     get_ols_uri_prefix,
     get_owl_download,
     get_part_of,
+    get_parts_dict,
     get_pattern,
     get_preferred_prefix,
     get_prefixcommons_uri_format,
