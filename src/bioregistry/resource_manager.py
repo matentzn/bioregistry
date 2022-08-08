@@ -362,6 +362,35 @@ class Manager:
             return dict(it)
         return {remapping.get(prefix, prefix): uri_prefix for prefix, uri_prefix in it}
 
+    def get_reverse_prefix_map(
+        self,
+        *,
+        priority: Optional[Sequence[str]] = None,
+        include_synonyms: bool = False,
+        remapping: Optional[Mapping[str, str]] = None,
+        use_preferred: bool = False,
+        blacklist: Optional[Collection[str]] = None,
+    ) -> Mapping[str, str]:
+        """Get a mapping from URI prefixes to their Bioregistry prefixes.
+
+        :param priority: A priority list for how to generate URI prefixes.
+        :param include_synonyms: Should synonyms of each prefix also be included as additional prefixes, but with
+            the same URI prefix?
+        :param remapping: A mapping from Bioregistry prefixes to preferred prefixes.
+        :param use_preferred: Should preferred prefixes be used? Set this to true if you're in the OBO context.
+        :param blacklist: Prefixes to skip
+        :return: A mapping from prefixes to URI prefixes.
+        """
+        it = self._iter_prefix_map(
+            priority=priority,
+            include_synonyms=include_synonyms,
+            use_preferred=use_preferred,
+            blacklist=blacklist,
+        )
+        if not remapping:
+            return {v:k for k,v in it}
+        return {remapping.get(prefix, prefix): uri_prefix for prefix, uri_prefix in it}
+
     def _iter_prefix_map(
         self,
         *,
