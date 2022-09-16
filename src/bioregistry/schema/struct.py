@@ -643,8 +643,10 @@ class Resource(BaseModel):
 
     def get_synonyms(self) -> Set[str]:
         """Get synonyms."""
-        # TODO aggregate even more from xrefs
-        return set(self.synonyms or {})
+        return set(itt.chain(
+            self.synonyms or [],
+            (self.prefixcommons or {}).get('synonyms', []),
+        )) - {self.prefix}
 
     def get_preferred_prefix(self) -> Optional[str]:
         """Get the preferred prefix (e.g., with stylization) if it exists.

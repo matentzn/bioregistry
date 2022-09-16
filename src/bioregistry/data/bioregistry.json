@@ -5096,9 +5096,6 @@
       "pubmed_ids": [
         "16381927"
       ],
-      "synonyms": [
-        "grid"
-      ],
       "uri_format": "http://thebiogrid.org/$1"
     },
     "publications": [
@@ -7820,10 +7817,6 @@
       "prefix": "cath",
       "pubmed_ids": [
         "9309224"
-      ],
-      "synonyms": [
-        "cath.domain",
-        "cath.superfamily"
       ],
       "uri_format": "http://www.cathdb.info/cathnode/$1"
     },
@@ -26696,8 +26689,7 @@
       "synonyms": [
         "genbank_nucl_gi",
         "genbank_protein_gi",
-        "gb",
-        "GenPept"
+        "gb"
       ],
       "uri_format": "http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?val=$1"
     },
