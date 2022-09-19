@@ -30,11 +30,11 @@ def get_uri_format(prefix: str, priority: Optional[Sequence[str]] = None) -> Opt
 
         1. Default first party (from the Bioregistry, BioContext, or MIRIAM)
         2. OBO Foundry
-        3. BioContext
-        4. MIRIAM/Identifiers.org
-        5. N2T
-        6. OLS
-        7. Prefix Commons
+        3. MIRIAM/Identifiers.org
+        4. N2T
+        5. OLS
+        6. Prefix Commons
+        7. BioContext
 
     :return: The best URI format string, where the ``$1`` should be replaced by the
         identifier. ``$1`` could potentially appear multiple times.

@@ -43100,6 +43100,7 @@
       "MedDRA",
       "Medical Dictionary for Regulatory Activities"
     ],
+    "uri_format": "http://purl.bioontology.org/ontology/MEDDRA/$1",
     "wikidata": {
       "prefix": "P3201"
     }

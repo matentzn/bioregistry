@@ -1281,11 +1281,11 @@ class Resource(BaseModel):
     DEFAULT_URI_FORMATTER_PRIORITY: ClassVar[Sequence[str]] = (
         "default",
         "obofoundry",
-        "biocontext",
         "miriam",
         "n2t",
         "ols",
         "prefixcommons",
+        "biocontext",
     )
 
     def get_uri_format(self, priority: Optional[Sequence[str]] = None) -> Optional[str]:
@@ -1296,11 +1296,11 @@ class Resource(BaseModel):
 
             1. Default first party (from the Bioregistry, BioContext, or MIRIAM)
             2. OBO Foundry
-            3. BioContext
-            4. MIRIAM/Identifiers.org
-            5. N2T
-            6. OLS
-            7. Prefix Commons
+            3. MIRIAM/Identifiers.org
+            4. N2T
+            5. OLS
+            6. Prefix Commons
+            7. BioContext
 
         :return: The best URI format string, where the ``$1`` should be replaced by a
             local unique identifier. ``$1`` could potentially appear multiple times.
@@ -1377,7 +1377,9 @@ class Resource(BaseModel):
         # TODO consider adding bananas
         for provider in self.get_extra_providers():
             yield provider.uri_format
-        for formatter_getter in self.URI_FORMATTERS.values():
+
+        for metaprefix in self.DEFAULT_URI_FORMATTER_PRIORITY:
+            formatter_getter = self.URI_FORMATTERS[metaprefix]
             uri_format = formatter_getter(self)
             if uri_format:
                 yield uri_format
