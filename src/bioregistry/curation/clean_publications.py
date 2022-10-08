@@ -66,7 +66,9 @@ def _main():  # noqa:C901
 
     tqdm.write(f"looked up {len(resource_dois):,} DOIs")
 
-    for resource, dois in tqdm(resource_dois):
+    for resource, dois in tqdm(
+        resource_dois, desc="resources with DOIs to update", unit="resource"
+    ):
         new_publications = []
         for doi in dois:
             csl_item = _get_doi_csl_item(doi)
@@ -104,7 +106,7 @@ def _main():  # noqa:C901
             c = 0
 
     for resource, pubmed_ids in tqdm(
-        resources, desc="resources with pubmeds to update", unit="resource"
+        resources, desc="resources with PubMeds to update", unit="resource"
     ):
         new_publications = []
         for pubmed in pubmed_ids:
