@@ -59,7 +59,9 @@
     },
     "name": "Catalogue des produits phytopharmaceutiques et de leurs usages, des matières fertilisantes et des supports de culture autorisés en France",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://hal.archives-ouvertes.fr/emse-03260693/",
+    "publication": {
+      "url": "https://hal.archives-ouvertes.fr/emse-03260693"
+    },
     "version": "1.1",
     "viewingRestriction": "public",
     "views": [
@@ -197,7 +199,9 @@
     },
     "name": "Agronomy Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://ceur-ws.org/Vol-1747/IT205_ICBO2016.pdf",
+    "publication": {
+      "url": "http://ceur-ws.org/Vol-1747/IT205_ICBO2016.pdf"
+    },
     "repository": "https://github.com/AgriculturalSemantics/agro",
     "version": "1.0",
     "viewingRestriction": "public"
@@ -327,7 +331,9 @@
     },
     "name": "Meat Thesaurus",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1016/j.meatsci.2022.108849",
+    "publication": {
+      "doi": "10.1016/j.meatsci.2022.108849"
+    },
     "version": "0.1",
     "viewingRestriction": "public"
   },
@@ -391,7 +397,9 @@
     },
     "name": "Semanticscience Integrated Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://www.jbiomedsem.com/content/5/1/14",
+    "publication": {
+      "url": "http://www.jbiomedsem.com/content/5/1/14"
+    },
     "version": "1.54",
     "viewingRestriction": "public"
   },
@@ -458,7 +466,9 @@
     },
     "name": "Rice Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1093/aobpla/plq008",
+    "publication": {
+      "doi": "10.1093/aobpla/plq008"
+    },
     "version": "March 2016",
     "viewingRestriction": "public"
   },
@@ -583,7 +593,9 @@
     },
     "name": "Agroecology Knowledge Management (GECO ontology)",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://dx.doi.org/10.1016/j.compag.2017.10.028",
+    "publication": {
+      "doi": "10.1016/j.compag.2017.10.028"
+    },
     "viewingRestriction": "public"
   },
   {
@@ -710,7 +722,9 @@
     },
     "name": "INIA Research Datasets",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://data.inia.es/def/",
+    "publication": {
+      "url": "http://data.inia.es/def"
+    },
     "version": "0.0.2",
     "viewingRestriction": "public"
   },
@@ -776,7 +790,9 @@
     },
     "name": "Sustainable Development Goals Interface Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://ceur-ws.org/Vol-1747/IT201_ICBO2016.pdf",
+    "publication": {
+      "url": "http://ceur-ws.org/Vol-1747/IT201_ICBO2016.pdf"
+    },
     "repository": "https://github.com/SDG-InterfaceOntology",
     "version": "2018-05-11",
     "viewingRestriction": "public"
@@ -846,7 +862,9 @@
     },
     "name": "Wheat Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1093/aobpla/plq008",
+    "publication": {
+      "doi": "10.1093/aobpla/plq008"
+    },
     "version": "Feb 2016",
     "viewingRestriction": "public"
   },
@@ -928,7 +946,6 @@
     "hasDomain": [
       "http://data.agroportal.lirmm.fr/categories/GENPLANT"
     ],
-    "homepage": "https://github.com/JervenBolleman/FALDO",
     "license": "CC0 1.0",
     "links": {
       "@context": {
@@ -970,7 +987,10 @@
     },
     "name": "Feature Annotation Location Description Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "doi.org/10.1186/s13326-016-0067-z",
+    "publication": {
+      "url": "doi.org/10.1186/s13326-016-0067-z"
+    },
+    "repository": "https://github.com/JervenBolleman/FALDO",
     "version": "Created at the Biohackathon 2012 and 2013",
     "viewingRestriction": "public"
   },
@@ -1033,7 +1053,9 @@
     },
     "name": "Experimental Factor Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1093/bioinformatics/btq099",
+    "publication": {
+      "doi": "10.1093/bioinformatics/btq099"
+    },
     "repository": "https://github.com/EBISPOT/efo",
     "version": "3.46.0",
     "viewingRestriction": "public"
@@ -1097,7 +1119,9 @@
     },
     "name": "Variation Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://genome.cshlp.org/content/early/2013/10/25/gr.157495.113.abstract",
+    "publication": {
+      "url": "http://genome.cshlp.org/content/early/2013/10/25/gr.157495.113.abstract"
+    },
     "version": "2017-02-06",
     "viewingRestriction": "public"
   },
@@ -1159,7 +1183,9 @@
     },
     "name": "Semantic Sensor Network Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1016/j.websem.2012.05.003",
+    "publication": {
+      "doi": "10.1016/j.websem.2012.05.003"
+    },
     "repository": "https://github.com/w3c/sdw",
     "version": "New modular version of the SSN ontology. \n\nThis ontology was originally developed in 2009-2011 by the W3C Semantic Sensor Networks Incubator Group (SSN-XG). For more information on the group's activities see: http://www.w3.org/2005/Incubator/ssn/. The ontology was revised and modularized in 2015-2017 by the W3C/OGC Spatial Data on the Web Working Group, see: https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology. \n\nIn particular, (a) the scope is extended to include actuation and sampling; (b) the core concepts and properties are factored out into the SOSA ontology. The SSN ontology imports SOSA and adds formal axiomatization consistent with the text definitions in SOSA, and adds classes and properties to accommodate the scope of the original SSN ontology.",
     "viewingRestriction": "public"
@@ -1222,7 +1248,9 @@
     },
     "name": "Crop Vocabulary",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1007/978-3-030-04284-4_22",
+    "publication": {
+      "doi": "10.1007/978-3-030-04284-4_22"
+    },
     "version": "2.03",
     "viewingRestriction": "public"
   },
@@ -1284,7 +1312,9 @@
     },
     "name": "AGRORDF",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://pdfs.semanticscholar.org/3000/185f2a8f3d7b7d3032b7613aa17b010b5b95.pdf",
+    "publication": {
+      "url": "https://pdfs.semanticscholar.org/3000/185f2a8f3d7b7d3032b7613aa17b010b5b95.pdf"
+    },
     "version": "1.5",
     "viewingRestriction": "public"
   },
@@ -1409,7 +1439,9 @@
     },
     "name": "The Extensible Observation Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1016/j.ecoinf.2007.05.004",
+    "publication": {
+      "doi": "10.1016/j.ecoinf.2007.05.004"
+    },
     "repository": "https://github.com/NCEAS/oboe",
     "viewingRestriction": "public"
   },
@@ -1543,7 +1575,9 @@
     },
     "name": "Biorefinery",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://prodinra.inra.fr/record/359143",
+    "publication": {
+      "url": "http://prodinra.inra.fr/record/359143"
+    },
     "version": "V-2020/07/03",
     "viewingRestriction": "public"
   },
@@ -1632,7 +1666,6 @@
     "hasDomain": [
       "http://data.agroportal.lirmm.fr/categories/NUTRITION"
     ],
-    "homepage": "https://github.com/pcastellanoescuder/FoodBiomarkerOntology",
     "links": {
       "@context": {
         "analytics": "http://data.bioontology.org/metadata/Analytics",
@@ -1673,6 +1706,7 @@
     },
     "name": "Food-Biomarker Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
+    "repository": "https://github.com/pcastellanoescuder/FoodBiomarkerOntology",
     "version": "1.0.0",
     "viewingRestriction": "public"
   },
@@ -1734,7 +1768,9 @@
     },
     "name": "Comparative Data Analysis Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://www.evolutionaryontology.org",
+    "publication": {
+      "url": "http://www.evolutionaryontology.org"
+    },
     "repository": "https://sourceforge.net/projects/cdao/",
     "version": "2013-02-01",
     "viewingRestriction": "public"
@@ -1872,7 +1908,9 @@
     },
     "name": "Protein Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://proconsortium.org/pirwww/about/publication.shtml",
+    "publication": {
+      "url": "http://proconsortium.org/pirwww/about/publication.shtml"
+    },
     "repository": "https://sourceforge.net/projects/pro-obo/",
     "version": "56.0",
     "viewingRestriction": "public"
@@ -2067,7 +2105,9 @@
     },
     "name": "AgronomicTaxon",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1007/978-3-319-70863-8_3",
+    "publication": {
+      "doi": "10.1007/978-3-319-70863-8_3"
+    },
     "version": "1.0",
     "viewingRestriction": "public"
   },
@@ -2200,7 +2240,9 @@
     },
     "name": "Plant Trait Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1007/978-1-4939-3167-5_5",
+    "publication": {
+      "doi": "10.1007/978-1-4939-3167-5_5"
+    },
     "repository": "https://github.com/Planteome/plant-trait-ontology",
     "version": "March 2018",
     "viewingRestriction": "public"
@@ -2268,7 +2310,9 @@
     },
     "name": "Process and Observation Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://dx.doi.org/10.1007/978-3-319-49157-8_13",
+    "publication": {
+      "doi": "10.1007/978-3-319-49157-8_13"
+    },
     "viewingRestriction": "public",
     "views": [
       "http://data.agroportal.lirmm.fr/ontologies/PO2-BIOREFINERY",
@@ -2339,7 +2383,9 @@
     },
     "name": "Biological Collections Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1371/journal.pone.0089606",
+    "publication": {
+      "doi": "10.1371/journal.pone.0089606"
+    },
     "repository": "https://github.com/BiodiversityOntologies/bco",
     "viewingRestriction": "public"
   },
@@ -2409,7 +2455,9 @@
     },
     "name": "AnaEE Thesaurus",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.3389/fevo.2018.00043",
+    "publication": {
+      "doi": "10.3389/fevo.2018.00043"
+    },
     "version": "2.0",
     "viewingRestriction": "public"
   },
@@ -2530,7 +2578,9 @@
     },
     "name": "EDAM bioinformatics operations, data types, formats, identifiers and topics",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://dx.doi.org/10.1093/bioinformatics/btt113",
+    "publication": {
+      "doi": "10.1093/bioinformatics/btt113"
+    },
     "repository": "https://github.com/edamontology/edamontology",
     "version": "1.25",
     "viewingRestriction": "public"
@@ -2599,7 +2649,9 @@
     },
     "name": "FoodOn",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1038/s41538-018-0032-6",
+    "publication": {
+      "doi": "10.1038/s41538-018-0032-6"
+    },
     "repository": "https://github.com/FoodOntology/foodon",
     "version": "v0.3.1",
     "viewingRestriction": "public"
@@ -2855,7 +2907,9 @@
     },
     "name": "Ontology of units of Measure",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.3233/SW-2012-0069",
+    "publication": {
+      "doi": "10.3233/SW-2012-0069"
+    },
     "repository": "https://github.com/HajoRijgersberg/OM",
     "version": "2.0.38",
     "viewingRestriction": "public"
@@ -2923,7 +2977,9 @@
     },
     "name": "French Crop Usage (Classification des plantes cultivées en France en fonction des usages)",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1016/j.compag.2017.10.022",
+    "publication": {
+      "doi": "10.1016/j.compag.2017.10.022"
+    },
     "repository": "https://gitlab.irstea.fr/copain/frenchcropusage",
     "version": "3.1",
     "viewingRestriction": "public"
@@ -3116,7 +3172,9 @@
     },
     "name": "Smart Applications REFerence ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://www.etsi.org/deliver/etsi_ts/103200_103299/103264/03.01.01_60/ts_103264v030101p.pdf",
+    "publication": {
+      "url": "https://www.etsi.org/deliver/etsi_ts/103200_103299/103264/03.01.01_60/ts_103264v030101p.pdf"
+    },
     "version": "v3.1.1",
     "viewingRestriction": "public"
   },
@@ -3175,7 +3233,9 @@
     },
     "name": "XEML Environment Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1111/j.1365-3040.2009.01964.x",
+    "publication": {
+      "doi": "10.1111/j.1365-3040.2009.01964.x"
+    },
     "repository": "https://xeo.codeplex.com/SourceControl/latest",
     "version": "1.6",
     "viewingRestriction": "public"
@@ -3242,7 +3302,9 @@
     },
     "name": "Animal Disease Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://hal.inrae.fr/hal-02746898",
+    "publication": {
+      "url": "https://hal.inrae.fr/hal-02746898"
+    },
     "version": "3.1",
     "viewingRestriction": "public"
   },
@@ -3369,7 +3431,9 @@
     },
     "name": "Solanaceae Phenotype Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1104/pp.108.119560",
+    "publication": {
+      "doi": "10.1104/pp.108.119560"
+    },
     "viewingRestriction": "public"
   },
   {
@@ -3435,7 +3499,9 @@
     },
     "name": "Bambara Groundnut Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1093/database/baab028",
+    "publication": {
+      "doi": "10.1093/database/baab028"
+    },
     "version": "2019-12-23",
     "viewingRestriction": "public"
   },
@@ -3563,7 +3629,9 @@
     },
     "name": "Environment Ontology for Livestock",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://www.atol-ontology.com/rb/fr/6",
+    "publication": {
+      "url": "http://www.atol-ontology.com/rb/fr/6"
+    },
     "viewingRestriction": "public"
   },
   {
@@ -3885,7 +3953,9 @@
     },
     "name": "Thesaurus to define land management practices in agriculture and forestry for soil carbon storage",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "under submission",
+    "publication": {
+      "url": "under"
+    },
     "version": "version 0.1 - February 2022",
     "viewingRestriction": "public"
   },
@@ -3953,7 +4023,9 @@
     },
     "name": "OntoBiotope",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://arxiv.org/abs/1805.04107",
+    "publication": {
+      "url": "https://arxiv.org/abs/1805.04107"
+    },
     "version": "Oct 2021",
     "viewingRestriction": "public"
   },
@@ -4141,7 +4213,9 @@
     },
     "name": "Multi-Crop Passport Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1093/aobpla/plq008",
+    "publication": {
+      "doi": "10.1093/aobpla/plq008"
+    },
     "version": "1.0",
     "viewingRestriction": "public"
   },
@@ -4275,7 +4349,9 @@
     },
     "name": "Matter Transfer Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://dx.doi.org/10.1515/pacres-2017-0004",
+    "publication": {
+      "doi": "10.1515/pacres-2017-0004"
+    },
     "version": "101",
     "viewingRestriction": "public"
   },
@@ -4476,7 +4552,9 @@
     },
     "name": "Environment Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1186/s13326-016-0097-6",
+    "publication": {
+      "doi": "10.1186/s13326-016-0097-6"
+    },
     "repository": "https://github.com/EnvironmentOntology/envo",
     "version": "2021-05-14",
     "viewingRestriction": "public"
@@ -4543,7 +4621,9 @@
     },
     "name": "Biodiversity Thesaurus",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://hal.archives-ouvertes.fr/hal-02907484",
+    "publication": {
+      "url": "https://hal.archives-ouvertes.fr/hal-02907484"
+    },
     "version": "2.1",
     "viewingRestriction": "public"
   },
@@ -4611,7 +4691,9 @@
     },
     "name": "Agri-Food Experiment Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1016/j.compag.2017.06.020",
+    "publication": {
+      "doi": "10.1016/j.compag.2017.06.020"
+    },
     "version": "4.2 May 2022",
     "viewingRestriction": "public"
   },
@@ -4678,7 +4760,9 @@
     },
     "name": "Cell Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://dx.doi.org/doi:10.1093/database/bav010, http://dx.doi.org/doi:10.1186/s13059-014-0560-6",
+    "publication": {
+      "doi": "doi:10.1093/database/bav010,"
+    },
     "repository": "https://github.com/obophenotype/cell-ontology",
     "version": "2022-09-15",
     "viewingRestriction": "public"
@@ -4812,7 +4896,9 @@
     },
     "name": "GEneral Multilingual Environmental Thesaurus",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://www.eionet.europa.eu/gemet/en/about/#chapter-VII",
+    "publication": {
+      "url": "http://www.eionet.europa.eu/gemet/en/about/#chapter-VII"
+    },
     "repository": "http://www.eionet.europa.eu/gemet/en/exports/rdf/latest",
     "version": "4.2.3",
     "viewingRestriction": "public"
@@ -4879,7 +4965,9 @@
     },
     "name": "Wheat Taxa Gold Standard",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1007/978-3-319-13674-5_29",
+    "publication": {
+      "doi": "10.1007/978-3-319-13674-5_29"
+    },
     "viewingRestriction": "public"
   },
   {
@@ -4947,7 +5035,9 @@
     },
     "name": "Phenotype And Trait Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1016/j.tree.2007.03.013",
+    "publication": {
+      "doi": "10.1016/j.tree.2007.03.013"
+    },
     "repository": "https://github.com/pato-ontology/pato/",
     "version": "2022-08-31",
     "viewingRestriction": "public"
@@ -5141,7 +5231,9 @@
     },
     "name": "National Center for Biotechnology Information (NCBI) Organismal Classification",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1093/nar/gki062",
+    "publication": {
+      "doi": "10.1093/nar/gki062"
+    },
     "version": "2022AA",
     "viewingRestriction": "public"
   },
@@ -5334,7 +5426,9 @@
     },
     "name": "Darwin-SW",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.3233/SW-150203",
+    "publication": {
+      "doi": "10.3233/SW-150203"
+    },
     "repository": "https://github.com/darwin-sw/dsw",
     "viewingRestriction": "public"
   },
@@ -5397,7 +5491,9 @@
     },
     "name": "Terminology of French bread descriptors",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "Roussel, P., Chiron, H., Della Valle, G., Ndiaye, A. (2010). Recueil de connaissances sur les descripteurs de qualité des pâtes et des pains ou variables d'état pour la panification française. Glossaire terminologique appliqué aux pains français. \n http://prodinra.inra.fr/record/48319",
+    "publication": {
+      "url": "Roussel,"
+    },
     "version": "1.0",
     "viewingRestriction": "public"
   },
@@ -5464,7 +5560,9 @@
     },
     "name": "Wheat Plant Anatomy and Development Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://pantheon.generationcp.org/index.php?option=com_content&task=view&id=472&Itemid=35",
+    "publication": {
+      "url": "http://pantheon.generationcp.org/index.php?option=com_content&task=view&id=472&Itemid=35"
+    },
     "version": "1.0",
     "viewingRestriction": "public"
   },
@@ -5657,7 +5755,9 @@
     },
     "name": "Food classification and description system",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.2903/sp.efsa.2015.EN-804",
+    "publication": {
+      "doi": "10.2903/sp.efsa.2015.EN-804"
+    },
     "version": "2",
     "viewingRestriction": "public"
   },
@@ -5724,7 +5824,9 @@
     },
     "name": "Ontology of Experimental Events",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1111/nph.15385",
+    "publication": {
+      "doi": "10.1111/nph.15385"
+    },
     "viewingRestriction": "public"
   },
   {
@@ -5985,7 +6087,9 @@
     },
     "name": "Vertebrate Trait Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1186/2041-1480-4-13",
+    "publication": {
+      "doi": "10.1186/2041-1480-4-13"
+    },
     "version": "12.1",
     "viewingRestriction": "public"
   },
@@ -6051,7 +6155,9 @@
     },
     "name": "Ontology for Experimental Phenotypic Objects",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1111/nph.15385",
+    "publication": {
+      "doi": "10.1111/nph.15385"
+    },
     "version": "3.1",
     "viewingRestriction": "public"
   },
@@ -6180,7 +6286,9 @@
     },
     "name": "Sensor, Observation, Sample, and Actuator Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://www.semantic-web-journal.net/system/files/swj1804.pdf",
+    "publication": {
+      "url": "http://www.semantic-web-journal.net/system/files/swj1804.pdf"
+    },
     "repository": "https://github.com/w3c/sdw",
     "version": "V-2017",
     "viewingRestriction": "public"
@@ -6305,7 +6413,9 @@
     },
     "name": "UMLS Semantic Network",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://dx.doi.org/10.1002%2Fcfg.255",
+    "publication": {
+      "doi": "10.1002%2Fcfg.255"
+    },
     "version": "2022AA",
     "viewingRestriction": "public"
   },
@@ -6386,7 +6496,6 @@
     "group": [
       "http://data.agroportal.lirmm.fr/groups/RICE"
     ],
-    "homepage": "https://github.com/BioInterchange/Ontologies",
     "links": {
       "@context": {
         "analytics": "http://data.bioontology.org/metadata/Analytics",
@@ -6427,7 +6536,10 @@
     },
     "name": "Genomic Feature and Variation Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.7717/peerj.933",
+    "publication": {
+      "doi": "10.7717/peerj.933"
+    },
+    "repository": "https://github.com/BioInterchange/Ontologies",
     "version": "1.0.2",
     "viewingRestriction": "public"
   },
@@ -6493,7 +6605,9 @@
     },
     "name": "Context-Aware System Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.3390/app10051803",
+    "publication": {
+      "doi": "10.3390/app10051803"
+    },
     "viewingRestriction": "public"
   },
   {
@@ -6554,7 +6668,9 @@
     },
     "name": "InfraRisk Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://dx.doi.org/10.1007/978-3-319-69459-7_31",
+    "publication": {
+      "doi": "10.1007/978-3-319-69459-7_31"
+    },
     "version": "1.0",
     "viewingRestriction": "public"
   },
@@ -6685,7 +6801,9 @@
     },
     "name": "AGROVOC",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://www.fao.org/agrovoc/publications",
+    "publication": {
+      "url": "https://www.fao.org/agrovoc/publications"
+    },
     "version": "2022-09",
     "viewingRestriction": "public"
   },
@@ -6752,7 +6870,9 @@
     },
     "name": "Cassava Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://www.cropontology.org/",
+    "publication": {
+      "url": "http://www.cropontology.org"
+    },
     "version": "February 2016",
     "viewingRestriction": "public"
   },
@@ -6819,7 +6939,9 @@
     },
     "name": "Flora Phenotype Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1186/s13326-016-0107-8",
+    "publication": {
+      "doi": "10.1186/s13326-016-0107-8"
+    },
     "repository": "https://github.com/flora-phenotype-ontology/flopoontology/",
     "version": "0.9",
     "viewingRestriction": "public"
@@ -7071,7 +7193,9 @@
     },
     "name": "Ontology for the management of Wine Sensory analysis Descriptors",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "None",
+    "publication": {
+      "url": "None"
+    },
     "repository": "http://agroportal.lirmm.fr/ontologies/OWSD",
     "version": "1",
     "viewingRestriction": "public"
@@ -7135,7 +7259,9 @@
     },
     "name": "BBCH-based Plant Phenological Description Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "DOI: 10.1007/978-3-030-71903-6_25",
+    "publication": {
+      "url": "DOI:"
+    },
     "repository": "https://gitlab.irstea.fr/copain/phenologicalstages",
     "viewingRestriction": "public"
   },
@@ -7263,7 +7389,9 @@
     },
     "name": "TAXREF-LD",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://hal.archives-ouvertes.fr/hal-01617708",
+    "publication": {
+      "url": "https://hal.archives-ouvertes.fr/hal-01617708"
+    },
     "repository": "https://github.com/frmichel/taxref-ld",
     "version": "15.2",
     "viewingRestriction": "public"
@@ -7331,7 +7459,9 @@
     },
     "name": "Wheat Trait and Phenotype Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.5808/GI.2020.18.2.e14",
+    "publication": {
+      "doi": "10.5808/GI.2020.18.2.e14"
+    },
     "version": "2.2.3b",
     "viewingRestriction": "public"
   },
@@ -7528,7 +7658,9 @@
     },
     "name": "Plant Environment Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://wiki.plantontology.org/index.php/Category:Publications",
+    "publication": {
+      "url": "http://wiki.plantontology.org/index.php/Category:Publications"
+    },
     "version": "releases/2020-08-21",
     "viewingRestriction": "public"
   },
@@ -7661,7 +7793,9 @@
     },
     "name": "Agricultural Experiments Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1016/j.compag.2017.06.020",
+    "publication": {
+      "doi": "10.1016/j.compag.2017.06.020"
+    },
     "version": "Version 3.3 created by UMR MISTEA",
     "viewingRestriction": "public"
   },
@@ -7848,7 +7982,9 @@
     },
     "name": "DEMETER Agriculture Information Model",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "DEMETER deliverable D2.1 Common data models and semantic interoperability mechanisms",
+    "publication": {
+      "url": "DEMETER"
+    },
     "viewingRestriction": "public"
   },
   {
@@ -7974,7 +8110,9 @@
     },
     "name": "Multi-scale Multi-step ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://dx.doi.org/10.1007/978-3-319-40985-6_13",
+    "publication": {
+      "doi": "10.1007/978-3-319-40985-6_13"
+    },
     "viewingRestriction": "public"
   },
   {
@@ -8093,7 +8231,9 @@
     },
     "name": "Global Agricultural Concept Scheme",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://eprints.rclis.org/30221/",
+    "publication": {
+      "url": "http://eprints.rclis.org/30221"
+    },
     "repository": "http://browser.agrisemantics.org/gacs/en/",
     "version": "Beta 1.6",
     "viewingRestriction": "public"
@@ -8161,7 +8301,9 @@
     },
     "name": "Chickpea Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1093/aobpla/plq008",
+    "publication": {
+      "doi": "10.1093/aobpla/plq008"
+    },
     "version": "July 2015",
     "viewingRestriction": "public"
   },
@@ -8226,7 +8368,9 @@
     },
     "name": "Common Greenhouse Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://gitlab.com/ddings/common-greenhouse-ontology",
+    "publication": {
+      "url": "https://gitlab.com/ddings/common-greenhouse-ontology"
+    },
     "version": "2.1",
     "viewingRestriction": "public"
   },
@@ -8354,7 +8498,9 @@
     },
     "name": "Single-Nucleotide Polymorphism (SNP) Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://hal.inria.fr/inria-00067863/en",
+    "publication": {
+      "url": "http://hal.inria.fr/inria-00067863/en"
+    },
     "version": "1.6",
     "viewingRestriction": "public"
   },
@@ -8421,7 +8567,9 @@
     },
     "name": "Plant Phenology Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.3389/fpls.2018.00517",
+    "publication": {
+      "doi": "10.3389/fpls.2018.00517"
+    },
     "repository": "https://github.com/PlantPhenoOntology",
     "version": "2018-10-26",
     "viewingRestriction": "public"
@@ -8490,7 +8638,9 @@
     },
     "name": "Animal Trait Ontology for Livestock",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://www.atol-ontology.com/rb/fr/6",
+    "publication": {
+      "url": "http://www.atol-ontology.com/rb/fr/6"
+    },
     "version": "6.0",
     "viewingRestriction": "public"
   },
@@ -8684,7 +8834,9 @@
     },
     "name": "Thesaurus of Plant Characteristics",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://doi.org/10.1111/1365-2745.12698",
+    "publication": {
+      "url": "http://doi.org/10.1111/1365-2745.12698"
+    },
     "version": "1.0",
     "viewingRestriction": "public"
   },
@@ -8745,7 +8897,9 @@
     },
     "name": "FOODIE core ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://link.springer.com/chapter/10.1007/978-3-319-33245-1_13",
+    "publication": {
+      "url": "https://link.springer.com/chapter/10.1007/978-3-319-33245-1_13"
+    },
     "viewingRestriction": "public"
   },
   {
@@ -8812,7 +8966,9 @@
     },
     "name": "Irrigation Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.3390/app10051803",
+    "publication": {
+      "doi": "10.3390/app10051803"
+    },
     "repository": "https://github.com/Irstea/irrig,",
     "version": "1.0.0",
     "viewingRestriction": "public"
@@ -9013,7 +9169,9 @@
     },
     "name": "Sequence Types and Features Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://www.sequenceontology.org/?page_id=296",
+    "publication": {
+      "url": "http://www.sequenceontology.org/?page_id=296"
+    },
     "repository": "https://github.com/The-Sequence-Ontology/SO-Ontologies",
     "viewingRestriction": "public"
   },
@@ -9139,7 +9297,9 @@
     },
     "name": "Gene Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://geneontology.org/page/publications",
+    "publication": {
+      "url": "http://geneontology.org/page/publications"
+    },
     "repository": "https://sourceforge.net/projects/geneontology/",
     "version": "2022-09-19",
     "viewingRestriction": "public"
@@ -9204,7 +9364,9 @@
     },
     "name": "Basic Formal Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://ifomis.uni-saarland.de/bfo/publications",
+    "publication": {
+      "url": "http://ifomis.uni-saarland.de/bfo/publications"
+    },
     "repository": "https://github.com/BFO-ontology/BFO",
     "version": "1.1",
     "viewingRestriction": "public"
@@ -9272,7 +9434,9 @@
     },
     "name": "Cowpea Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://www.cropontology.org/",
+    "publication": {
+      "url": "http://www.cropontology.org"
+    },
     "version": "August 2015",
     "viewingRestriction": "public"
   },
@@ -9398,7 +9562,9 @@
     },
     "name": "Plant Experimental Conditions Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "https://www.ncbi.nlm.nih.gov/pubmed/22847540",
+    "publication": {
+      "pubmed": "22847540"
+    },
     "repository": "https://github.com/Planteome/plant-experimental-conditions-ontology",
     "version": "V-2018",
     "viewingRestriction": "public"
@@ -9535,7 +9701,9 @@
     },
     "name": "Plant Ontology",
     "ontologyType": "http://data.agroportal.lirmm.fr/ontology_types/ONTOLOGY",
-    "publication": "http://wiki.plantontology.org/index.php/Related_Publications",
+    "publication": {
+      "url": "http://wiki.plantontology.org/index.php/Related_Publications"
+    },
     "version": "September 2016",
     "viewingRestriction": "public"
   }

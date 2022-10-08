@@ -54,7 +54,9 @@
     },
     "name": "EuroSciVoc",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/euroscivoc",
+    "publication": {
+      "url": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/euroscivoc"
+    },
     "version": "1.3"
   },
   {
@@ -171,7 +173,9 @@
     },
     "name": "Darwin Core Degree of Establishment Controlled Vocabulary",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.3897/biss.3.38084",
+    "publication": {
+      "doi": "10.3897/biss.3.38084"
+    },
     "version": "2021-09-01"
   },
   {
@@ -229,7 +233,7 @@
     },
     "name": "Environmental Thesaurus",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "https://github.com/LTER-Europe/EnvThes",
+    "repository": "https://github.com/LTER-Europe/EnvThes",
     "version": "3"
   },
   {
@@ -288,7 +292,9 @@
     },
     "name": "Fish Traits Thesaurus",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "http://www.lifewatchitaly.eu/web/lifewatch-italia/reports",
+    "publication": {
+      "url": "http://www.lifewatchitaly.eu/web/lifewatch-italia/reports"
+    },
     "version": "1.0"
   },
   {
@@ -346,7 +352,9 @@
     },
     "name": "Marine Regions PlaceTypes code list",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "http://www.vliz.be/en/imis?refid=346947",
+    "publication": {
+      "url": "http://www.vliz.be/en/imis?refid=346947"
+    },
     "version": "1"
   },
   {
@@ -361,7 +369,6 @@
       "name": "Ramona Walls"
     },
     "description": "The BCO supports the interoperability of biodiversity and biodiversity related data, including data on museum collections, environmental/metagenomic samples, and ecological surveys. A key aspect of the BCO is distinguishing among material samples (i.e. specimens), observing processes, and data about either of those entities.",
-    "homepage": "https://github.com/BiodiversityOntologies/bco",
     "links": {
       "@context": {
         "analytics": "http://data.bioontology.org/metadata/Analytics",
@@ -404,7 +411,7 @@
     },
     "name": "BioCollections Ontology",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "https://github.com/BiodiversityOntologies/bco",
+    "repository": "https://github.com/BiodiversityOntologies/bco",
     "version": "2021-11-14"
   },
   {
@@ -462,7 +469,9 @@
     },
     "name": "Darwin Core Pathway Controlled Vocabulary",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.3897/biss.3.38084",
+    "publication": {
+      "doi": "10.3897/biss.3.38084"
+    },
     "version": "2021-09-01"
   },
   {
@@ -520,7 +529,9 @@
     },
     "name": "Darwin Core Establishment Means Controlled Vocabulary",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.3897/biss.3.38084",
+    "publication": {
+      "doi": "10.3897/biss.3.38084"
+    },
     "version": "2021-09-01"
   },
   {
@@ -578,7 +589,9 @@
     },
     "name": "Biodiversity Thesaurus",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "https://hal.archives-ouvertes.fr/hal-02907484",
+    "publication": {
+      "url": "https://hal.archives-ouvertes.fr/hal-02907484"
+    },
     "version": "2.1"
   },
   {
@@ -636,7 +649,9 @@
     },
     "name": "Audubon Core Controlled Vocabulary for Dublin Core format",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "http://rs.tdwg.org/ac/doc/format/",
+    "publication": {
+      "url": "http://rs.tdwg.org/ac/doc/format"
+    },
     "version": "2020-10-13"
   },
   {
@@ -651,7 +666,6 @@
       "name": "Steve Baskauf"
     },
     "description": "Darwin-SW (DSW) is an RDF vocabulary designed to complement the Biodiversity Information Standards (TDWG) Darwin Core Standard. DSW is based on a model derived from a community discussion about the relationships among the main Darwin Core classes.",
-    "homepage": "https://github.com/darwin-sw/dsw",
     "links": {
       "@context": {
         "analytics": "http://data.bioontology.org/metadata/Analytics",
@@ -694,7 +708,10 @@
     },
     "name": "Darwin-SW",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "http://www.semantic-web-journal.net/content/darwin-sw-darwin-core-based-terms-expressing-biodiversity-data-rdf-1",
+    "publication": {
+      "url": "http://www.semantic-web-journal.net/content/darwin-sw-darwin-core-based-terms-expressing-biodiversity-data-rdf-1"
+    },
+    "repository": "https://github.com/darwin-sw/dsw",
     "version": "1.0.1"
   },
   {
@@ -752,7 +769,9 @@
     },
     "name": "LifeWatch ERIC Upper Ontology",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "http://ecoportal.lifewatch.eu/ontologies/LUPO",
+    "publication": {
+      "url": "http://ecoportal.lifewatch.eu/ontologies/LUPO"
+    },
     "version": "v1.0 2021/04/07"
   },
   {
@@ -867,7 +886,9 @@
     },
     "name": "AGROVOC",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "https://data.apps.fao.org/catalog/organization/agrovoc?q=&sort=title_string+desc",
+    "publication": {
+      "url": "https://data.apps.fao.org/catalog/organization/agrovoc?q=&sort=title_string+desc"
+    },
     "summaryOnly": true
   },
   {
@@ -925,7 +946,9 @@
     },
     "name": "eurio",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurio",
+    "publication": {
+      "url": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurio"
+    },
     "version": "v1.1 - 15 October 2021"
   },
   {
@@ -983,7 +1006,9 @@
     },
     "name": "Audubon Core variant Controlled Vocabulary",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "http://rs.tdwg.org/ac/doc/variant/",
+    "publication": {
+      "url": "http://rs.tdwg.org/ac/doc/variant"
+    },
     "version": "2020-10-13"
   },
   {
@@ -1043,7 +1068,9 @@
     },
     "name": "Phytoplankton Traits Thesaurus",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "https://doi.org/10.1016/j.ecoinf.2017.10.014",
+    "publication": {
+      "doi": "10.1016/j.ecoinf.2017.10.014"
+    },
     "version": "1.0"
   },
   {
@@ -1101,7 +1128,9 @@
     },
     "name": "Marine Regions ontology",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "http://www.vliz.be/en/imis?refid=346947",
+    "publication": {
+      "url": "http://www.vliz.be/en/imis?refid=346947"
+    },
     "version": "1"
   },
   {
@@ -1215,7 +1244,9 @@
     },
     "name": "EuroVoc Core Concepts",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurovoc",
+    "publication": {
+      "url": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurovoc"
+    },
     "version": "20211217-0"
   },
   {
@@ -1272,7 +1303,9 @@
     },
     "name": "Alien Species Thesaurus",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "https://www.lifewatchitaly.eu/publications/#1590425563910-01d9d51a-b764"
+    "publication": {
+      "url": "https://www.lifewatchitaly.eu/publications/#1590425563910-01d9d51a-b764"
+    }
   },
   {
     "@id": "http://193.204.79.110:8080/ontologies/ACSUBTYPE",
@@ -1329,7 +1362,9 @@
     },
     "name": "Audubon Core subtype Controlled Vocabulary",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "http://rs.tdwg.org/ac/doc/subtype/",
+    "publication": {
+      "url": "http://rs.tdwg.org/ac/doc/subtype"
+    },
     "version": "2020-10-13"
   },
   {
@@ -1344,7 +1379,6 @@
       "name": "Ramona Walls"
     },
     "description": "The Population and Community Ontology (PCO) describes material entities, qualities, and processes related to collections of interacting organisms such as populations and communities. It is taxon neutral, and can be used for any species, including humans. The classes in the PCO are useful for describing evolutionary processes, organismal interactions, and ecological experiments. Practical applications of the PCO include community health care, plant pathology, behavioral studies, sociology, and ecology.",
-    "homepage": "https://github.com/PopulationAndCommunityOntology/pco",
     "links": {
       "@context": {
         "analytics": "http://data.bioontology.org/metadata/Analytics",
@@ -1387,7 +1421,7 @@
     },
     "name": "Population and Community Ontology",
     "ontologyType": "http://193.204.79.110:8080/ontology_types/ONTOLOGY",
-    "publication": "https://github.com/PopulationAndCommunityOntology/pco",
+    "repository": "https://github.com/PopulationAndCommunityOntology/pco",
     "version": "2021-05-03"
   },
   {

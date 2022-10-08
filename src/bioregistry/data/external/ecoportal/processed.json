@@ -8,7 +8,9 @@
     "homepage": "http://rs.tdwg.org/ac/doc/format/",
     "name": "Audubon Core Controlled Vocabulary for Dublin Core format",
     "prefix": "ACFORMAT",
-    "publication": "http://rs.tdwg.org/ac/doc/format/",
+    "publication": {
+      "url": "http://rs.tdwg.org/ac/doc/format"
+    },
     "version": "2020-10-13"
   },
   "ACSUBTYPE": {
@@ -20,7 +22,9 @@
     "homepage": "http://rs.tdwg.org/ac/doc/subtype/",
     "name": "Audubon Core subtype Controlled Vocabulary",
     "prefix": "ACSUBTYPE",
-    "publication": "http://rs.tdwg.org/ac/doc/subtype/",
+    "publication": {
+      "url": "http://rs.tdwg.org/ac/doc/subtype"
+    },
     "version": "2020-10-13"
   },
   "ACVARIANT": {
@@ -32,7 +36,9 @@
     "homepage": "http://rs.tdwg.org/ac/doc/variant/",
     "name": "Audubon Core variant Controlled Vocabulary",
     "prefix": "ACVARIANT",
-    "publication": "http://rs.tdwg.org/ac/doc/variant/",
+    "publication": {
+      "url": "http://rs.tdwg.org/ac/doc/variant"
+    },
     "version": "2020-10-13"
   },
   "AGROVOC": {
@@ -44,7 +50,9 @@
     "homepage": "https://agrovoc.fao.org/browse/agrovoc/en/",
     "name": "AGROVOC",
     "prefix": "AGROVOC",
-    "publication": "https://data.apps.fao.org/catalog/organization/agrovoc?q=&sort=title_string+desc"
+    "publication": {
+      "url": "https://data.apps.fao.org/catalog/organization/agrovoc?q=&sort=title_string+desc"
+    }
   },
   "ALIENSPECIES": {
     "contact": {
@@ -54,7 +62,9 @@
     "description": "The Alien Species Thesaurus is an initiative to deal with the semantics about alien and invasive species. It has been developed and published by LifeWatch Italy, the Italian node of the e-science European infrastructure for biodiversity and ecosystem research (LifeWatch ERIC). It is developed on the basis of already existing glossaries created within the framework of international initiatives aimed at the study of alien and invasive species. The terms (or concepts) are shared very broadly by the scientific community, and their definitions derive from guidelines prepared by relevant international organizations, and only in few occasions by peer reviewed papers. The Thesaurus currently consists of 157 terms.",
     "name": "Alien Species Thesaurus",
     "prefix": "ALIENSPECIES",
-    "publication": "https://www.lifewatchitaly.eu/publications/#1590425563910-01d9d51a-b764"
+    "publication": {
+      "url": "https://www.lifewatchitaly.eu/publications/#1590425563910-01d9d51a-b764"
+    }
   },
   "BCO": {
     "contact": {
@@ -62,10 +72,9 @@
       "name": "Ramona Walls"
     },
     "description": "The BCO supports the interoperability of biodiversity and biodiversity related data, including data on museum collections, environmental/metagenomic samples, and ecological surveys. A key aspect of the BCO is distinguishing among material samples (i.e. specimens), observing processes, and data about either of those entities.",
-    "homepage": "https://github.com/BiodiversityOntologies/bco",
     "name": "BioCollections Ontology",
     "prefix": "BCO",
-    "publication": "https://github.com/BiodiversityOntologies/bco",
+    "repository": "https://github.com/BiodiversityOntologies/bco",
     "version": "2021-11-14"
   },
   "BIODIVTHES": {
@@ -77,7 +86,9 @@
     "homepage": "https://www.loterre.fr/skosmos/BLH/en/",
     "name": "Biodiversity Thesaurus",
     "prefix": "BIODIVTHES",
-    "publication": "https://hal.archives-ouvertes.fr/hal-02907484",
+    "publication": {
+      "url": "https://hal.archives-ouvertes.fr/hal-02907484"
+    },
     "version": "2.1"
   },
   "DSW": {
@@ -86,10 +97,12 @@
       "name": "Steve Baskauf"
     },
     "description": "Darwin-SW (DSW) is an RDF vocabulary designed to complement the Biodiversity Information Standards (TDWG) Darwin Core Standard. DSW is based on a model derived from a community discussion about the relationships among the main Darwin Core classes.",
-    "homepage": "https://github.com/darwin-sw/dsw",
     "name": "Darwin-SW",
     "prefix": "DSW",
-    "publication": "http://www.semantic-web-journal.net/content/darwin-sw-darwin-core-based-terms-expressing-biodiversity-data-rdf-1",
+    "publication": {
+      "url": "http://www.semantic-web-journal.net/content/darwin-sw-darwin-core-based-terms-expressing-biodiversity-data-rdf-1"
+    },
+    "repository": "https://github.com/darwin-sw/dsw",
     "version": "1.0.1"
   },
   "DWCDOE": {
@@ -101,7 +114,9 @@
     "homepage": "http://rs.tdwg.org/dwc/doc/doe/",
     "name": "Darwin Core Degree of Establishment Controlled Vocabulary",
     "prefix": "DWCDOE",
-    "publication": "https://doi.org/10.3897/biss.3.38084",
+    "publication": {
+      "doi": "10.3897/biss.3.38084"
+    },
     "version": "2021-09-01"
   },
   "DWCEM": {
@@ -113,7 +128,9 @@
     "homepage": "http://rs.tdwg.org/dwc/doc/em/",
     "name": "Darwin Core Establishment Means Controlled Vocabulary",
     "prefix": "DWCEM",
-    "publication": "https://doi.org/10.3897/biss.3.38084",
+    "publication": {
+      "doi": "10.3897/biss.3.38084"
+    },
     "version": "2021-09-01"
   },
   "DWCPW": {
@@ -125,7 +142,9 @@
     "homepage": "http://rs.tdwg.org/dwc/doc/pw/",
     "name": "Darwin Core Pathway Controlled Vocabulary",
     "prefix": "DWCPW",
-    "publication": "https://doi.org/10.3897/biss.3.38084",
+    "publication": {
+      "doi": "10.3897/biss.3.38084"
+    },
     "version": "2021-09-01"
   },
   "ENDEMISMS": {
@@ -148,7 +167,7 @@
     "homepage": "http://vocabs.lter-europe.net/EnvThes/",
     "name": "Environmental Thesaurus",
     "prefix": "ENVTHES",
-    "publication": "https://github.com/LTER-Europe/EnvThes",
+    "repository": "https://github.com/LTER-Europe/EnvThes",
     "version": "3"
   },
   "EURIO": {
@@ -160,7 +179,9 @@
     "homepage": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurio",
     "name": "eurio",
     "prefix": "EURIO",
-    "publication": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurio",
+    "publication": {
+      "url": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurio"
+    },
     "version": "v1.1 - 15 October 2021"
   },
   "EUROSCIVOC": {
@@ -172,7 +193,9 @@
     "homepage": "http://publications.europa.eu/resource/dataset/euroscivoc",
     "name": "EuroSciVoc",
     "prefix": "EUROSCIVOC",
-    "publication": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/euroscivoc",
+    "publication": {
+      "url": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/euroscivoc"
+    },
     "version": "1.3"
   },
   "EUROVOC": {
@@ -184,7 +207,9 @@
     "homepage": "http://publications.europa.eu/resource/dataset/eurovoc",
     "name": "EuroVoc Core Concepts",
     "prefix": "EUROVOC",
-    "publication": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurovoc",
+    "publication": {
+      "url": "https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/eurovoc"
+    },
     "version": "20211217-0"
   },
   "FISHTRAITS": {
@@ -196,7 +221,9 @@
     "homepage": "http://thesauri.lifewatchitaly.eu/fishTraits/index.php",
     "name": "Fish Traits Thesaurus",
     "prefix": "FISHTRAITS",
-    "publication": "http://www.lifewatchitaly.eu/web/lifewatch-italia/reports",
+    "publication": {
+      "url": "http://www.lifewatchitaly.eu/web/lifewatch-italia/reports"
+    },
     "version": "1.0"
   },
   "LUPO": {
@@ -208,7 +235,9 @@
     "homepage": "http://ecoportal.lifewatch.eu/ontologies/LUPO",
     "name": "LifeWatch ERIC Upper Ontology",
     "prefix": "LUPO",
-    "publication": "http://ecoportal.lifewatch.eu/ontologies/LUPO",
+    "publication": {
+      "url": "http://ecoportal.lifewatch.eu/ontologies/LUPO"
+    },
     "version": "v1.0 2021/04/07"
   },
   "MACROALGAETRAITS": {
@@ -230,7 +259,9 @@
     "homepage": "https://www.marineregions.org/",
     "name": "Marine Regions ontology",
     "prefix": "MR",
-    "publication": "http://www.vliz.be/en/imis?refid=346947",
+    "publication": {
+      "url": "http://www.vliz.be/en/imis?refid=346947"
+    },
     "version": "1"
   },
   "MRPTCODELIST": {
@@ -242,7 +273,9 @@
     "homepage": "https://www.marineregions.org/",
     "name": "Marine Regions PlaceTypes code list",
     "prefix": "MRPTCODELIST",
-    "publication": "http://www.vliz.be/en/imis?refid=346947",
+    "publication": {
+      "url": "http://www.vliz.be/en/imis?refid=346947"
+    },
     "version": "1"
   },
   "PCO": {
@@ -251,10 +284,9 @@
       "name": "Ramona Walls"
     },
     "description": "The Population and Community Ontology (PCO) describes material entities, qualities, and processes related to collections of interacting organisms such as populations and communities. It is taxon neutral, and can be used for any species, including humans. The classes in the PCO are useful for describing evolutionary processes, organismal interactions, and ecological experiments. Practical applications of the PCO include community health care, plant pathology, behavioral studies, sociology, and ecology.",
-    "homepage": "https://github.com/PopulationAndCommunityOntology/pco",
     "name": "Population and Community Ontology",
     "prefix": "PCO",
-    "publication": "https://github.com/PopulationAndCommunityOntology/pco",
+    "repository": "https://github.com/PopulationAndCommunityOntology/pco",
     "version": "2021-05-03"
   },
   "PHYTOTRAITS": {
@@ -266,7 +298,9 @@
     "homepage": "http://thesauri.lifewatchitaly.eu/PhytoTraits/index.php",
     "name": "Phytoplankton Traits Thesaurus",
     "prefix": "PHYTOTRAITS",
-    "publication": "https://doi.org/10.1016/j.ecoinf.2017.10.014",
+    "publication": {
+      "doi": "10.1016/j.ecoinf.2017.10.014"
+    },
     "version": "1.0"
   },
   "STY": {

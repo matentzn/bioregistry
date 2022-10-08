@@ -70,11 +70,19 @@ class OntoPortalClient:
         # see https://data.bioontology.org/documentation#Ontology
         res = self.query(self.base_url + "/ontologies", summaryOnly=False, notes=True)
         records = res.json()
-        records = thread_map(self._preprocess, records, unit="ontology", max_workers=3)
+        records = thread_map(
+            self._preprocess,
+            records,
+            unit="ontology",
+            max_workers=3,
+            desc=f"downloading {self.metaprefix}",
+        )
         with self.raw_path.open("w") as file:
             json.dump(records, file, indent=2, sort_keys=True, ensure_ascii=False)
 
-        records = thread_map(self.process, records, disable=True)
+        records = thread_map(
+            self.process, records, disable=True, desc=f"processing {self.metaprefix}"
+        )
         rv = {result["prefix"]: result for result in records}
 
         with self.processed_path.open("w") as file:
@@ -94,7 +102,6 @@ class OntoPortalClient:
         res_json = res.json()
         for key in [
             "homepage",
-            "publication",
             "version",
             "description",
             "exampleIdentifier",
@@ -113,6 +120,10 @@ class OntoPortalClient:
                     .replace("  ", " ")
                 )
 
+        # in many records, the homepage is written as a github repository
+        if not record.get("repository") and "github.com" in record.get("homepage", ""):
+            record["repository"] = record.pop("homepage").rstrip("/")
+
         license_stub = res_json.get("hasLicense")
         if license_stub:
             record["license"] = standardize_license(license_stub)
@@ -126,6 +137,26 @@ class OntoPortalClient:
             # TODO consider sorting contacts in a canonical order?
             # contact = min(contacts, key=lambda c: len(c["email"]))
             record["contact"] = {k: v for k, v in contact.items() if k != "id"}
+
+        publication = (res_json.get("publication") or "").strip().rstrip("/")
+        if publication and "github.com" in publication:
+            record["repository"] = publication
+        elif publication:
+            publication = publication.split(" ")[0]  # when people put awful lists
+            for prefix, uri_prefix in [
+                ("pmc", "https://www.ncbi.nlm.nih.gov/pmc/articles/"),
+                ("pmc", "http://www.ncbi.nlm.nih.gov/pmc/articles/"),
+                ("pubmed", "https://www.ncbi.nlm.nih.gov/pubmed/"),
+                ("pubmed", "http://www.ncbi.nlm.nih.gov/pubmed/"),
+                ("doi", "https://doi.org/"),
+                ("doi", "http://dx.doi.org/"),
+                ("doi", "https://dx.doi.org/"),
+            ]:
+                if publication.startswith(uri_prefix):
+                    record["publication"] = {prefix: publication[len(uri_prefix) :]}
+                    break
+            else:
+                record["publication"] = {"url": publication}
 
         return {k: v for k, v in record.items() if v}
 

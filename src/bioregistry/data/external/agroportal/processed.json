@@ -10,7 +10,9 @@
     "license": "CC BY 4.0",
     "name": "Agricultural Experiments Ontology",
     "prefix": "AEO",
-    "publication": "https://doi.org/10.1016/j.compag.2017.06.020",
+    "publication": {
+      "doi": "10.1016/j.compag.2017.06.020"
+    },
     "version": "Version 3.3 created by UMR MISTEA"
   },
   "AFEO": {
@@ -24,7 +26,9 @@
     "license": "CC BY 4.0",
     "name": "Agri-Food Experiment Ontology",
     "prefix": "AFEO",
-    "publication": "https://doi.org/10.1016/j.compag.2017.06.020",
+    "publication": {
+      "doi": "10.1016/j.compag.2017.06.020"
+    },
     "version": "4.2 May 2022"
   },
   "AFO": {
@@ -48,7 +52,9 @@
     "license": "CC BY 4.0",
     "name": "Agronomy Ontology",
     "prefix": "AGRO",
-    "publication": "http://ceur-ws.org/Vol-1747/IT205_ICBO2016.pdf",
+    "publication": {
+      "url": "http://ceur-ws.org/Vol-1747/IT205_ICBO2016.pdf"
+    },
     "repository": "https://github.com/AgriculturalSemantics/agro",
     "version": "1.0"
   },
@@ -63,7 +69,9 @@
     "license": "W3C",
     "name": "AGRORDF",
     "prefix": "AGRORDF",
-    "publication": "https://pdfs.semanticscholar.org/3000/185f2a8f3d7b7d3032b7613aa17b010b5b95.pdf",
+    "publication": {
+      "url": "https://pdfs.semanticscholar.org/3000/185f2a8f3d7b7d3032b7613aa17b010b5b95.pdf"
+    },
     "version": "1.5"
   },
   "AGROVOC": {
@@ -77,7 +85,9 @@
     "license": "CC-BY IGO 3.0",
     "name": "AGROVOC",
     "prefix": "AGROVOC",
-    "publication": "https://www.fao.org/agrovoc/publications",
+    "publication": {
+      "url": "https://www.fao.org/agrovoc/publications"
+    },
     "version": "2022-09"
   },
   "AHOL": {
@@ -103,7 +113,9 @@
     "license": "CC BY 4.0",
     "name": "AnaEE Thesaurus",
     "prefix": "ANAEETHES",
-    "publication": "https://doi.org/10.3389/fevo.2018.00043",
+    "publication": {
+      "doi": "10.3389/fevo.2018.00043"
+    },
     "version": "2.0"
   },
   "ANDO": {
@@ -116,7 +128,9 @@
     "license": "CC BY-SA 4.0",
     "name": "Animal Disease Ontology",
     "prefix": "ANDO",
-    "publication": "https://hal.inrae.fr/hal-02746898",
+    "publication": {
+      "url": "https://hal.inrae.fr/hal-02746898"
+    },
     "version": "3.1"
   },
   "ANT": {
@@ -139,7 +153,9 @@
     "example_uri": "http://opendata.inra.fr/AsCoPainT/contiguite",
     "name": "Terminology of French bread descriptors",
     "prefix": "ASCOPAIN-T",
-    "publication": "Roussel, P., Chiron, H., Della Valle, G., Ndiaye, A. (2010). Recueil de connaissances sur les descripteurs de qualité des pâtes et des pains ou variables d'état pour la panification française. Glossaire terminologique appliqué aux pains français. \n http://prodinra.inra.fr/record/48319",
+    "publication": {
+      "url": "Roussel,"
+    },
     "version": "1.0"
   },
   "ATC": {
@@ -153,7 +169,9 @@
     "license": "CC BY 4.0",
     "name": "AgronomicTaxon",
     "prefix": "ATC",
-    "publication": "https://doi.org/10.1007/978-3-319-70863-8_3",
+    "publication": {
+      "doi": "10.1007/978-3-319-70863-8_3"
+    },
     "version": "1.0"
   },
   "ATOL": {
@@ -167,7 +185,9 @@
     "license": "CC BY 4.0",
     "name": "Animal Trait Ontology for Livestock",
     "prefix": "ATOL",
-    "publication": "http://www.atol-ontology.com/rb/fr/6",
+    "publication": {
+      "url": "http://www.atol-ontology.com/rb/fr/6"
+    },
     "version": "6.0"
   },
   "BCO": {
@@ -181,7 +201,9 @@
     "license": "CC0 1.0",
     "name": "Biological Collections Ontology",
     "prefix": "BCO",
-    "publication": "https://doi.org/10.1371/journal.pone.0089606",
+    "publication": {
+      "doi": "10.1371/journal.pone.0089606"
+    },
     "repository": "https://github.com/BiodiversityOntologies/bco"
   },
   "BDG": {
@@ -208,7 +230,9 @@
     "license": "CC BY 4.0",
     "name": "Basic Formal Ontology",
     "prefix": "BFO",
-    "publication": "http://ifomis.uni-saarland.de/bfo/publications",
+    "publication": {
+      "url": "http://ifomis.uni-saarland.de/bfo/publications"
+    },
     "repository": "https://github.com/BFO-ontology/BFO",
     "version": "1.1"
   },
@@ -223,7 +247,9 @@
     "license": "CC BY 4.0",
     "name": "Biodiversity Thesaurus",
     "prefix": "BIODIVTHES",
-    "publication": "https://hal.archives-ouvertes.fr/hal-02907484",
+    "publication": {
+      "url": "https://hal.archives-ouvertes.fr/hal-02907484"
+    },
     "version": "2.1"
   },
   "BIOREFINERY": {
@@ -237,7 +263,9 @@
     "license": "CC BY 4.0",
     "name": "Biorefinery",
     "prefix": "BIOREFINERY",
-    "publication": "http://prodinra.inra.fr/record/359143",
+    "publication": {
+      "url": "http://prodinra.inra.fr/record/359143"
+    },
     "version": "V-2020/07/03"
   },
   "C3POCM": {
@@ -277,7 +305,9 @@
     "license": "CC BY 4.0",
     "name": "Context-Aware System Ontology",
     "prefix": "CASO",
-    "publication": "https://doi.org/10.3390/app10051803"
+    "publication": {
+      "doi": "10.3390/app10051803"
+    }
   },
   "CD": {
     "contact": {
@@ -300,7 +330,9 @@
     "license": "CC0 1.0",
     "name": "Comparative Data Analysis Ontology",
     "prefix": "CDAO",
-    "publication": "http://www.evolutionaryontology.org",
+    "publication": {
+      "url": "http://www.evolutionaryontology.org"
+    },
     "repository": "https://sourceforge.net/projects/cdao/",
     "version": "2013-02-01"
   },
@@ -315,7 +347,9 @@
     "license": "Apache 2.0 License",
     "name": "Common Greenhouse Ontology",
     "prefix": "CGO",
-    "publication": "https://gitlab.com/ddings/common-greenhouse-ontology",
+    "publication": {
+      "url": "https://gitlab.com/ddings/common-greenhouse-ontology"
+    },
     "version": "2.1"
   },
   "CIQUAL": {
@@ -340,7 +374,9 @@
     "license": "CC BY 4.0",
     "name": "Cell Ontology",
     "prefix": "CL",
-    "publication": "http://dx.doi.org/doi:10.1093/database/bav010, http://dx.doi.org/doi:10.1186/s13059-014-0560-6",
+    "publication": {
+      "doi": "doi:10.1093/database/bav010,"
+    },
     "repository": "https://github.com/obophenotype/cell-ontology",
     "version": "2022-09-15"
   },
@@ -367,7 +403,9 @@
     "license": "CC BY 4.0",
     "name": "Multi-Crop Passport Ontology",
     "prefix": "CO_020",
-    "publication": "https://doi.org/10.1093/aobpla/plq008",
+    "publication": {
+      "doi": "10.1093/aobpla/plq008"
+    },
     "version": "1.0"
   },
   "CO_121": {
@@ -381,7 +419,9 @@
     "license": "CC BY 4.0",
     "name": "Wheat Plant Anatomy and Development Ontology",
     "prefix": "CO_121",
-    "publication": "http://pantheon.generationcp.org/index.php?option=com_content&task=view&id=472&Itemid=35",
+    "publication": {
+      "url": "http://pantheon.generationcp.org/index.php?option=com_content&task=view&id=472&Itemid=35"
+    },
     "version": "1.0"
   },
   "CO_125": {
@@ -407,7 +447,9 @@
     "license": "CC BY 4.0",
     "name": "Rice Ontology",
     "prefix": "CO_320",
-    "publication": "https://doi.org/10.1093/aobpla/plq008",
+    "publication": {
+      "doi": "10.1093/aobpla/plq008"
+    },
     "version": "March 2016"
   },
   "CO_321": {
@@ -421,7 +463,9 @@
     "license": "CC BY 4.0",
     "name": "Wheat Ontology",
     "prefix": "CO_321",
-    "publication": "https://doi.org/10.1093/aobpla/plq008",
+    "publication": {
+      "doi": "10.1093/aobpla/plq008"
+    },
     "version": "Feb 2016"
   },
   "CO_322": {
@@ -539,7 +583,9 @@
     "license": "CC BY 4.0",
     "name": "Cassava Ontology",
     "prefix": "CO_334",
-    "publication": "http://www.cropontology.org/",
+    "publication": {
+      "url": "http://www.cropontology.org"
+    },
     "version": "February 2016"
   },
   "CO_335": {
@@ -592,7 +638,9 @@
     "license": "CC BY 4.0",
     "name": "Chickpea Ontology",
     "prefix": "CO_338",
-    "publication": "https://doi.org/10.1093/aobpla/plq008",
+    "publication": {
+      "doi": "10.1093/aobpla/plq008"
+    },
     "version": "July 2015"
   },
   "CO_339": {
@@ -619,7 +667,9 @@
     "license": "CC BY 4.0",
     "name": "Cowpea Ontology",
     "prefix": "CO_340",
-    "publication": "http://www.cropontology.org/",
+    "publication": {
+      "url": "http://www.cropontology.org"
+    },
     "version": "August 2015"
   },
   "CO_341": {
@@ -802,7 +852,9 @@
     "license": "CC BY 4.0",
     "name": "Bambara Groundnut Ontology",
     "prefix": "CO_366",
-    "publication": "https://doi.org/10.1093/database/baab028",
+    "publication": {
+      "doi": "10.1093/database/baab028"
+    },
     "version": "2019-12-23"
   },
   "CO_715": {
@@ -829,7 +881,9 @@
     "license": "CC BY 4.0",
     "name": "French Crop Usage (Classification des plantes cultivées en France en fonction des usages)",
     "prefix": "CROPUSAGE",
-    "publication": "https://doi.org/10.1016/j.compag.2017.10.022",
+    "publication": {
+      "doi": "10.1016/j.compag.2017.10.022"
+    },
     "repository": "https://gitlab.irstea.fr/copain/frenchcropusage",
     "version": "3.1"
   },
@@ -844,7 +898,9 @@
     "license": "CC0 1.0",
     "name": "Crop Vocabulary",
     "prefix": "CVO",
-    "publication": "https://doi.org/10.1007/978-3-030-04284-4_22",
+    "publication": {
+      "doi": "10.1007/978-3-030-04284-4_22"
+    },
     "version": "2.03"
   },
   "DATA4CPLUS": {
@@ -858,7 +914,9 @@
     "license": "Licence Creative Commons Attribution - Pas de Modification 4.0 International - (CC-BY-ND)",
     "name": "Thesaurus to define land management practices in agriculture and forestry for soil carbon storage",
     "prefix": "DATA4CPLUS",
-    "publication": "under submission",
+    "publication": {
+      "url": "under"
+    },
     "version": "version 0.1 - February 2022"
   },
   "DEMETER-AIM": {
@@ -872,7 +930,9 @@
     "license": "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0",
     "name": "DEMETER Agriculture Information Model",
     "prefix": "DEMETER-AIM",
-    "publication": "DEMETER deliverable D2.1 Common data models and semantic interoperability mechanisms"
+    "publication": {
+      "url": "DEMETER"
+    }
   },
   "DSW": {
     "contact": {
@@ -885,7 +945,9 @@
     "license": "CC0 1.0",
     "name": "Darwin-SW",
     "prefix": "DSW",
-    "publication": "https://doi.org/10.3233/SW-150203",
+    "publication": {
+      "doi": "10.3233/SW-150203"
+    },
     "repository": "https://github.com/darwin-sw/dsw"
   },
   "DURUM_WHEAT": {
@@ -911,7 +973,9 @@
     "license": "CC BY 4.0",
     "name": "Catalogue des produits phytopharmaceutiques et de leurs usages, des matières fertilisantes et des supports de culture autorisés en France",
     "prefix": "E-PHY",
-    "publication": "https://hal.archives-ouvertes.fr/emse-03260693/",
+    "publication": {
+      "url": "https://hal.archives-ouvertes.fr/emse-03260693"
+    },
     "version": "1.1"
   },
   "EDAM": {
@@ -925,7 +989,9 @@
     "license": "CC BY 4.0",
     "name": "EDAM bioinformatics operations, data types, formats, identifiers and topics",
     "prefix": "EDAM",
-    "publication": "http://dx.doi.org/10.1093/bioinformatics/btt113",
+    "publication": {
+      "doi": "10.1093/bioinformatics/btt113"
+    },
     "repository": "https://github.com/edamontology/edamontology",
     "version": "1.25"
   },
@@ -940,7 +1006,9 @@
     "license": "Apache 2.0 License",
     "name": "Experimental Factor Ontology",
     "prefix": "EFO",
-    "publication": "https://doi.org/10.1093/bioinformatics/btq099",
+    "publication": {
+      "doi": "10.1093/bioinformatics/btq099"
+    },
     "repository": "https://github.com/EBISPOT/efo",
     "version": "3.46.0"
   },
@@ -955,7 +1023,9 @@
     "license": "CC0 1.0",
     "name": "Environment Ontology",
     "prefix": "ENVO",
-    "publication": "https://doi.org/10.1186/s13326-016-0097-6",
+    "publication": {
+      "doi": "10.1186/s13326-016-0097-6"
+    },
     "repository": "https://github.com/EnvironmentOntology/envo",
     "version": "2021-05-14"
   },
@@ -970,7 +1040,9 @@
     "license": "CC BY 4.0",
     "name": "Plant Environment Ontology",
     "prefix": "EO",
-    "publication": "http://wiki.plantontology.org/index.php/Category:Publications",
+    "publication": {
+      "url": "http://wiki.plantontology.org/index.php/Category:Publications"
+    },
     "version": "releases/2020-08-21"
   },
   "EOL": {
@@ -984,7 +1056,9 @@
     "license": "CC BY 4.0",
     "name": "Environment Ontology for Livestock",
     "prefix": "EOL",
-    "publication": "http://www.atol-ontology.com/rb/fr/6"
+    "publication": {
+      "url": "http://www.atol-ontology.com/rb/fr/6"
+    }
   },
   "FALDO": {
     "contact": {
@@ -993,11 +1067,13 @@
     },
     "description": "FALDO is the Feature Annotation Location Description Ontology. It is a simple ontology to describe sequence feature positions and regions as found in GFF3, DBBJ, EMBL, GenBank files, UniProt, and many other bioinformatics resources. The aim of this ontology is to describe the position of a sequence region or a feature. It does not aim to describe features or regions itself, but instead depends on resources such as the Sequence Ontology or the UniProt core ontolgy.",
     "example_uri": "http://biohackathon.org/resource/faldo#CollectionOfRegions",
-    "homepage": "https://github.com/JervenBolleman/FALDO",
     "license": "CC0 1.0",
     "name": "Feature Annotation Location Description Ontology",
     "prefix": "FALDO",
-    "publication": "doi.org/10.1186/s13326-016-0067-z",
+    "publication": {
+      "url": "doi.org/10.1186/s13326-016-0067-z"
+    },
+    "repository": "https://github.com/JervenBolleman/FALDO",
     "version": "Created at the Biohackathon 2012 and 2013"
   },
   "FLAIR": {
@@ -1025,7 +1101,9 @@
     "license": "CC0 1.0",
     "name": "Flora Phenotype Ontology",
     "prefix": "FLOPO",
-    "publication": "https://doi.org/10.1186/s13326-016-0107-8",
+    "publication": {
+      "doi": "10.1186/s13326-016-0107-8"
+    },
     "repository": "https://github.com/flora-phenotype-ontology/flopoontology/",
     "version": "0.9"
   },
@@ -1036,9 +1114,9 @@
     },
     "description": "FOBI (Food-Biomarker Ontology) is an ontology composed of two interconnected sub-ontologies. One is a ”Food Ontology” consisting of raw foods and multi-component foods while the second is a ”Biomarker Ontology” containing food intake biomarkers classified by their chemical classes. These two sub-ontologies are conceptually independent but interconnected by different properties. This allows data and information regarding foods and food biomarkers to be visualized in a bidirectional way, going from metabolomics to nutritional data or vice versa. Potential applications of this ontology include the annotation of foods and biomarkers using a well-defined and consistent nomenclature, the standardized reporting of metabolomics workflows (e.g. metabolite identification, experimental design), or the application of different enrichment analysis approaches to analyze nutrimetabolomic data.",
     "example_uri": "http://purl.obolibrary.org/obo/FOODON_03307240",
-    "homepage": "https://github.com/pcastellanoescuder/FoodBiomarkerOntology",
     "name": "Food-Biomarker Ontology",
     "prefix": "FOBI",
+    "repository": "https://github.com/pcastellanoescuder/FoodBiomarkerOntology",
     "version": "1.0.0"
   },
   "FOODEX2": {
@@ -1051,7 +1129,9 @@
     "homepage": "http://www.efsa.europa.eu/",
     "name": "Food classification and description system",
     "prefix": "FOODEX2",
-    "publication": "https://doi.org/10.2903/sp.efsa.2015.EN-804",
+    "publication": {
+      "doi": "10.2903/sp.efsa.2015.EN-804"
+    },
     "version": "2"
   },
   "FOODIE": {
@@ -1064,7 +1144,9 @@
     "homepage": "http://foodie-cloud.github.io/model/FOODIE.html",
     "name": "FOODIE core ontology",
     "prefix": "FOODIE",
-    "publication": "https://link.springer.com/chapter/10.1007/978-3-319-33245-1_13"
+    "publication": {
+      "url": "https://link.springer.com/chapter/10.1007/978-3-319-33245-1_13"
+    }
   },
   "FOODON": {
     "contact": {
@@ -1077,7 +1159,9 @@
     "license": "CC BY 3.0",
     "name": "FoodOn",
     "prefix": "FOODON",
-    "publication": "https://doi.org/10.1038/s41538-018-0032-6",
+    "publication": {
+      "doi": "10.1038/s41538-018-0032-6"
+    },
     "repository": "https://github.com/FoodOntology/foodon",
     "version": "v0.3.1"
   },
@@ -1091,7 +1175,9 @@
     "homepage": "http://agrisemantics.org/gacs/",
     "name": "Global Agricultural Concept Scheme",
     "prefix": "GACS",
-    "publication": "http://eprints.rclis.org/30221/",
+    "publication": {
+      "url": "http://eprints.rclis.org/30221"
+    },
     "repository": "http://browser.agrisemantics.org/gacs/en/",
     "version": "Beta 1.6"
   },
@@ -1116,7 +1202,9 @@
     "homepage": "https://geco.ecophytopic.fr/",
     "name": "Agroecology Knowledge Management (GECO ontology)",
     "prefix": "GECO",
-    "publication": "http://dx.doi.org/10.1016/j.compag.2017.10.028"
+    "publication": {
+      "doi": "10.1016/j.compag.2017.10.028"
+    }
   },
   "GEMET": {
     "contact": {
@@ -1129,7 +1217,9 @@
     "license": "http://creativecommons.org/licenses/by/2.5/dk",
     "name": "GEneral Multilingual Environmental Thesaurus",
     "prefix": "GEMET",
-    "publication": "http://www.eionet.europa.eu/gemet/en/about/#chapter-VII",
+    "publication": {
+      "url": "http://www.eionet.europa.eu/gemet/en/about/#chapter-VII"
+    },
     "repository": "http://www.eionet.europa.eu/gemet/en/exports/rdf/latest",
     "version": "4.2.3"
   },
@@ -1140,10 +1230,12 @@
     },
     "description": "The Genomic Feature and Variation Ontology (GFVO) is modeled to represent genomic data using the Resource Description Format (RDF). It is captures the contents of data files that adhere to the Generic Feature Format Version 3 (GFF3, http://www.sequenceontology.org/resources/gff3.html), the General Transfer Format (GTF, http://mblab.wustl.edu/GTF22.html), the Genome Variation Format Version 1 (GVF, http://www.sequenceontology.org/resources/gvf.html), and the Variant Call Format (VCF, http://vcftools.sourceforge.net/specs.html). The creation of the ontology was inspired by previous work of Robert Hoehndorf on RDF2OWL (http://code.google.com/p/rdf2owl).",
     "example_uri": "http://www.biointerchange.org/gfvo#BaseQuality",
-    "homepage": "https://github.com/BioInterchange/Ontologies",
     "name": "Genomic Feature and Variation Ontology",
     "prefix": "GFVO",
-    "publication": "https://doi.org/10.7717/peerj.933",
+    "publication": {
+      "doi": "10.7717/peerj.933"
+    },
+    "repository": "https://github.com/BioInterchange/Ontologies",
     "version": "1.0.2"
   },
   "GO": {
@@ -1157,7 +1249,9 @@
     "license": "CC BY 4.0",
     "name": "Gene Ontology",
     "prefix": "GO",
-    "publication": "http://geneontology.org/page/publications",
+    "publication": {
+      "url": "http://geneontology.org/page/publications"
+    },
     "repository": "https://sourceforge.net/projects/geneontology/",
     "version": "2022-09-19"
   },
@@ -1196,7 +1290,9 @@
     "license": "CC BY 3.0",
     "name": "InfraRisk Ontology",
     "prefix": "INFRARISK",
-    "publication": "http://dx.doi.org/10.1007/978-3-319-69459-7_31",
+    "publication": {
+      "doi": "10.1007/978-3-319-69459-7_31"
+    },
     "version": "1.0"
   },
   "INIA-RDM": {
@@ -1210,7 +1306,9 @@
     "license": "CC BY 4.0",
     "name": "INIA Research Datasets",
     "prefix": "INIA-RDM",
-    "publication": "http://data.inia.es/def/",
+    "publication": {
+      "url": "http://data.inia.es/def"
+    },
     "version": "0.0.2"
   },
   "IRRIG": {
@@ -1224,7 +1322,9 @@
     "license": "CC BY 4.0",
     "name": "Irrigation Ontology",
     "prefix": "IRRIG",
-    "publication": "https://doi.org/10.3390/app10051803",
+    "publication": {
+      "doi": "10.3390/app10051803"
+    },
     "repository": "https://github.com/Irstea/irrig,",
     "version": "1.0.0"
   },
@@ -1285,7 +1385,9 @@
     "license": "CC BY 4.0",
     "name": "Meat Thesaurus",
     "prefix": "MEAT-T",
-    "publication": "https://doi.org/10.1016/j.meatsci.2022.108849",
+    "publication": {
+      "doi": "10.1016/j.meatsci.2022.108849"
+    },
     "version": "0.1"
   },
   "MICROFILTRATION": {
@@ -1311,7 +1413,9 @@
     "license": "CC BY 4.0",
     "name": "Multi-scale Multi-step ontology",
     "prefix": "MS2O",
-    "publication": "http://dx.doi.org/10.1007/978-3-319-40985-6_13"
+    "publication": {
+      "doi": "10.1007/978-3-319-40985-6_13"
+    }
   },
   "NCBITAXON": {
     "contact": {
@@ -1323,7 +1427,9 @@
     "homepage": "https://www.ncbi.nlm.nih.gov/",
     "name": "National Center for Biotechnology Information (NCBI) Organismal Classification",
     "prefix": "NCBITAXON",
-    "publication": "https://doi.org/10.1093/nar/gki062",
+    "publication": {
+      "doi": "10.1093/nar/gki062"
+    },
     "version": "2022AA"
   },
   "OBOE": {
@@ -1337,7 +1443,9 @@
     "license": "CC BY 3.0",
     "name": "The Extensible Observation Ontology",
     "prefix": "OBOE",
-    "publication": "https://doi.org/10.1016/j.ecoinf.2007.05.004",
+    "publication": {
+      "doi": "10.1016/j.ecoinf.2007.05.004"
+    },
     "repository": "https://github.com/NCEAS/oboe"
   },
   "OEEV": {
@@ -1350,7 +1458,9 @@
     "license": "CC BY 4.0",
     "name": "Ontology of Experimental Events",
     "prefix": "OEEV",
-    "publication": "https://doi.org/10.1111/nph.15385"
+    "publication": {
+      "doi": "10.1111/nph.15385"
+    }
   },
   "OEPO": {
     "contact": {
@@ -1362,7 +1472,9 @@
     "license": "CC BY 4.0",
     "name": "Ontology for Experimental Phenotypic Objects",
     "prefix": "OEPO",
-    "publication": "https://doi.org/10.1111/nph.15385",
+    "publication": {
+      "doi": "10.1111/nph.15385"
+    },
     "version": "3.1"
   },
   "OFPE": {
@@ -1388,7 +1500,9 @@
     "license": "CC BY 4.0",
     "name": "Ontology of units of Measure",
     "prefix": "OM",
-    "publication": "https://doi.org/10.3233/SW-2012-0069",
+    "publication": {
+      "doi": "10.3233/SW-2012-0069"
+    },
     "repository": "https://github.com/HajoRijgersberg/OM",
     "version": "2.0.38"
   },
@@ -1403,7 +1517,9 @@
     "license": "http://creativecommons.org/licenses/by-nd/4.0",
     "name": "OntoBiotope",
     "prefix": "ONTOBIOTOPE",
-    "publication": "https://arxiv.org/abs/1805.04107",
+    "publication": {
+      "url": "https://arxiv.org/abs/1805.04107"
+    },
     "version": "Oct 2021"
   },
   "OWSD": {
@@ -1417,7 +1533,9 @@
     "license": "https://www.etalab.gouv.fr/licence-ouverte-open-licence",
     "name": "Ontology for the management of Wine Sensory analysis Descriptors",
     "prefix": "OWSD",
-    "publication": "None",
+    "publication": {
+      "url": "None"
+    },
     "repository": "http://agroportal.lirmm.fr/ontologies/OWSD",
     "version": "1"
   },
@@ -1432,7 +1550,9 @@
     "license": "CC BY 3.0",
     "name": "Phenotype And Trait Ontology",
     "prefix": "PATO",
-    "publication": "https://doi.org/10.1016/j.tree.2007.03.013",
+    "publication": {
+      "doi": "10.1016/j.tree.2007.03.013"
+    },
     "repository": "https://github.com/pato-ontology/pato/",
     "version": "2022-08-31"
   },
@@ -1473,7 +1593,9 @@
     "license": "CC BY 4.0",
     "name": "Plant Experimental Conditions Ontology",
     "prefix": "PECO",
-    "publication": "https://www.ncbi.nlm.nih.gov/pubmed/22847540",
+    "publication": {
+      "pubmed": "22847540"
+    },
     "repository": "https://github.com/Planteome/plant-experimental-conditions-ontology",
     "version": "V-2018"
   },
@@ -1488,7 +1610,9 @@
     "license": "CC BY 4.0",
     "name": "Plant Ontology",
     "prefix": "PO",
-    "publication": "http://wiki.plantontology.org/index.php/Related_Publications",
+    "publication": {
+      "url": "http://wiki.plantontology.org/index.php/Related_Publications"
+    },
     "version": "September 2016"
   },
   "PO2": {
@@ -1502,7 +1626,9 @@
     "license": "CC BY 4.0",
     "name": "Process and Observation Ontology",
     "prefix": "PO2",
-    "publication": "http://dx.doi.org/10.1007/978-3-319-49157-8_13"
+    "publication": {
+      "doi": "10.1007/978-3-319-49157-8_13"
+    }
   },
   "POLAPGEN_BARLEY": {
     "contact": {
@@ -1528,7 +1654,9 @@
     "license": "CC BY 4.0",
     "name": "BBCH-based Plant Phenological Description Ontology",
     "prefix": "PPDO",
-    "publication": "DOI: 10.1007/978-3-030-71903-6_25",
+    "publication": {
+      "url": "DOI:"
+    },
     "repository": "https://gitlab.irstea.fr/copain/phenologicalstages"
   },
   "PPEO": {
@@ -1556,7 +1684,9 @@
     "license": "CC BY 3.0",
     "name": "Plant Phenology Ontology",
     "prefix": "PPO",
-    "publication": "https://doi.org/10.3389/fpls.2018.00517",
+    "publication": {
+      "doi": "10.3389/fpls.2018.00517"
+    },
     "repository": "https://github.com/PlantPhenoOntology",
     "version": "2018-10-26"
   },
@@ -1571,7 +1701,9 @@
     "license": "CC BY 4.0",
     "name": "Protein Ontology",
     "prefix": "PR",
-    "publication": "http://proconsortium.org/pirwww/about/publication.shtml",
+    "publication": {
+      "url": "http://proconsortium.org/pirwww/about/publication.shtml"
+    },
     "repository": "https://sourceforge.net/projects/pro-obo/",
     "version": "56.0"
   },
@@ -1600,7 +1732,9 @@
     "license": "https://forge.etsi.org/etsi-software-license",
     "name": "Smart Applications REFerence ontology",
     "prefix": "SAREF",
-    "publication": "https://www.etsi.org/deliver/etsi_ts/103200_103299/103264/03.01.01_60/ts_103264v030101p.pdf",
+    "publication": {
+      "url": "https://www.etsi.org/deliver/etsi_ts/103200_103299/103264/03.01.01_60/ts_103264v030101p.pdf"
+    },
     "version": "v3.1.1"
   },
   "SAREF4AGRI": {
@@ -1638,7 +1772,9 @@
     "homepage": "https://github.com/SDG-InterfaceOntology/sdgio",
     "name": "Sustainable Development Goals Interface Ontology",
     "prefix": "SDGIO",
-    "publication": "http://ceur-ws.org/Vol-1747/IT201_ICBO2016.pdf",
+    "publication": {
+      "url": "http://ceur-ws.org/Vol-1747/IT201_ICBO2016.pdf"
+    },
     "repository": "https://github.com/SDG-InterfaceOntology",
     "version": "2018-05-11"
   },
@@ -1667,7 +1803,9 @@
     "license": "CC BY 4.0",
     "name": "Semanticscience Integrated Ontology",
     "prefix": "SIO",
-    "publication": "http://www.jbiomedsem.com/content/5/1/14",
+    "publication": {
+      "url": "http://www.jbiomedsem.com/content/5/1/14"
+    },
     "version": "1.54"
   },
   "SIREN": {
@@ -1690,7 +1828,9 @@
     "homepage": "https://members.loria.fr/ACoulet/files/snpontology1.6_description.html",
     "name": "Single-Nucleotide Polymorphism (SNP) Ontology",
     "prefix": "SNPO",
-    "publication": "http://hal.inria.fr/inria-00067863/en",
+    "publication": {
+      "url": "http://hal.inria.fr/inria-00067863/en"
+    },
     "version": "1.6"
   },
   "SO": {
@@ -1703,7 +1843,9 @@
     "homepage": "http://www.sequenceontology.org/",
     "name": "Sequence Types and Features Ontology",
     "prefix": "SO",
-    "publication": "http://www.sequenceontology.org/?page_id=296",
+    "publication": {
+      "url": "http://www.sequenceontology.org/?page_id=296"
+    },
     "repository": "https://github.com/The-Sequence-Ontology/SO-Ontologies"
   },
   "SOIL": {
@@ -1729,7 +1871,9 @@
     "license": "http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document",
     "name": "Sensor, Observation, Sample, and Actuator Ontology",
     "prefix": "SOSA",
-    "publication": "http://www.semantic-web-journal.net/system/files/swj1804.pdf",
+    "publication": {
+      "url": "http://www.semantic-web-journal.net/system/files/swj1804.pdf"
+    },
     "repository": "https://github.com/w3c/sdw",
     "version": "V-2017"
   },
@@ -1756,7 +1900,9 @@
     "license": "CC BY 4.0",
     "name": "Solanaceae Phenotype Ontology",
     "prefix": "SPTO",
-    "publication": "https://doi.org/10.1104/pp.108.119560"
+    "publication": {
+      "doi": "10.1104/pp.108.119560"
+    }
   },
   "SSN": {
     "contact": {
@@ -1768,7 +1914,9 @@
     "homepage": "https://www.w3.org/TR/vocab-ssn/",
     "name": "Semantic Sensor Network Ontology",
     "prefix": "SSN",
-    "publication": "https://doi.org/10.1016/j.websem.2012.05.003",
+    "publication": {
+      "doi": "10.1016/j.websem.2012.05.003"
+    },
     "repository": "https://github.com/w3c/sdw",
     "version": "New modular version of the SSN ontology. \n\nThis ontology was originally developed in 2009-2011 by the W3C Semantic Sensor Networks Incubator Group (SSN-XG). For more information on the group's activities see: http://www.w3.org/2005/Incubator/ssn/. The ontology was revised and modularized in 2015-2017 by the W3C/OGC Spatial Data on the Web Working Group, see: https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology. \n\nIn particular, (a) the scope is extended to include actuation and sampling; (b) the core concepts and properties are factored out into the SOSA ontology. The SSN ontology imports SOSA and adds formal axiomatization consistent with the text definitions in SOSA, and adds classes and properties to accommodate the scope of the original SSN ontology."
   },
@@ -1783,7 +1931,9 @@
     "license": "CC0 1.0",
     "name": "UMLS Semantic Network",
     "prefix": "STY",
-    "publication": "https://dx.doi.org/10.1002%2Fcfg.255",
+    "publication": {
+      "doi": "10.1002%2Fcfg.255"
+    },
     "version": "2022AA"
   },
   "TAXREF-LD": {
@@ -1797,7 +1947,9 @@
     "license": "CC BY 3.0",
     "name": "TAXREF-LD",
     "prefix": "TAXREF-LD",
-    "publication": "https://hal.archives-ouvertes.fr/hal-01617708",
+    "publication": {
+      "url": "https://hal.archives-ouvertes.fr/hal-01617708"
+    },
     "repository": "https://github.com/frmichel/taxref-ld",
     "version": "15.2"
   },
@@ -1822,7 +1974,9 @@
     "license": "CC BY 4.0",
     "name": "Plant Trait Ontology",
     "prefix": "TO",
-    "publication": "https://doi.org/10.1007/978-1-4939-3167-5_5",
+    "publication": {
+      "doi": "10.1007/978-1-4939-3167-5_5"
+    },
     "repository": "https://github.com/Planteome/plant-trait-ontology",
     "version": "March 2018"
   },
@@ -1836,7 +1990,9 @@
     "homepage": "http://top-thesaurus.org",
     "name": "Thesaurus of Plant Characteristics",
     "prefix": "TOP",
-    "publication": "http://doi.org/10.1111/1365-2745.12698",
+    "publication": {
+      "url": "http://doi.org/10.1111/1365-2745.12698"
+    },
     "version": "1.0"
   },
   "TRANSMAT": {
@@ -1850,7 +2006,9 @@
     "license": "CC BY 4.0",
     "name": "Matter Transfer Ontology",
     "prefix": "TRANSMAT",
-    "publication": "http://dx.doi.org/10.1515/pacres-2017-0004",
+    "publication": {
+      "doi": "10.1515/pacres-2017-0004"
+    },
     "version": "101"
   },
   "TRIPHASE": {
@@ -1889,7 +2047,9 @@
     "homepage": "http://variationontology.org/",
     "name": "Variation Ontology",
     "prefix": "VARIO",
-    "publication": "http://genome.cshlp.org/content/early/2013/10/25/gr.157495.113.abstract",
+    "publication": {
+      "url": "http://genome.cshlp.org/content/early/2013/10/25/gr.157495.113.abstract"
+    },
     "version": "2017-02-06"
   },
   "VT": {
@@ -1902,7 +2062,9 @@
     "homepage": "https://www.animalgenome.org/bioinfo/projects/vt/",
     "name": "Vertebrate Trait Ontology",
     "prefix": "VT",
-    "publication": "https://doi.org/10.1186/2041-1480-4-13",
+    "publication": {
+      "doi": "10.1186/2041-1480-4-13"
+    },
     "version": "12.1"
   },
   "WCACROPS": {
@@ -1927,7 +2089,9 @@
     "license": "CC BY 4.0",
     "name": "Wheat Trait and Phenotype Ontology",
     "prefix": "WHEATPHENOTYPE",
-    "publication": "https://doi.org/10.5808/GI.2020.18.2.e14",
+    "publication": {
+      "doi": "10.5808/GI.2020.18.2.e14"
+    },
     "version": "2.2.3b"
   },
   "WHEAT_TAX": {
@@ -1941,7 +2105,9 @@
     "license": "CC BY 4.0",
     "name": "Wheat Taxa Gold Standard",
     "prefix": "WHEAT_TAX",
-    "publication": "https://doi.org/10.1007/978-3-319-13674-5_29"
+    "publication": {
+      "doi": "10.1007/978-3-319-13674-5_29"
+    }
   },
   "XEO": {
     "contact": {
@@ -1953,7 +2119,9 @@
     "license": "https://opensource.org/licenses/MIT",
     "name": "XEML Environment Ontology",
     "prefix": "XEO",
-    "publication": "https://doi.org/10.1111/j.1365-3040.2009.01964.x",
+    "publication": {
+      "doi": "10.1111/j.1365-3040.2009.01964.x"
+    },
     "repository": "https://xeo.codeplex.com/SourceControl/latest",
     "version": "1.6"
   }
