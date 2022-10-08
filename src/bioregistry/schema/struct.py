@@ -870,7 +870,9 @@ class Resource(BaseModel):
         """Return the repository, if available."""
         if self.repository:
             return self.repository
-        return self.get_prefix_key("repository", "obofoundry")
+        return self.get_prefix_key(
+            "repository", ("obofoundry", "bioportal", "ecoportal", "agroportal")
+        )
 
     def get_contact(self) -> Optional[Attributable]:
         """Get the contact, if available."""
