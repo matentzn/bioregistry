@@ -24,8 +24,11 @@ def _get_pubmed_csl_item(pmid):
 
 
 @lru_cache(None)
-def _get_doi_csl_item(pmid):
-    return get_doi_csl_item(pmid)
+def _get_doi_csl_item(doi):
+    try:
+        return get_doi_csl_item(doi)
+    except Exception:
+        return None
 
 
 @lru_cache(None)
