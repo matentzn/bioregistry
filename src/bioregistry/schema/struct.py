@@ -1073,6 +1073,9 @@ class Resource(BaseModel):
                 publications.append(
                     Publication(pubmed=pubmed, doi=None, pmc=None, title=None, year=None)
                 )
+
+        # TODO get publications from bio/agro/ecoportal, but they have until
+        #  now all been redundant of other sources.
         return deduplicate_publications(publications)
 
     def get_twitter(self) -> Optional[str]:
