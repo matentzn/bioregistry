@@ -11,7 +11,7 @@ import click
 from more_click import force_option
 
 from bioregistry import manager
-from bioregistry.constants import TABLES_SUMMARY_LATEX_PATH
+from bioregistry.constants import TABLES_SUMMARY_EXCEL_PATH, TABLES_SUMMARY_LATEX_PATH
 from bioregistry.version import get_version
 
 
@@ -75,6 +75,19 @@ class BioregistrySummary:
             ("Total Contributors", self.number_total_contributors),
         ]
 
+    def write_paper_table_1(self) -> None:
+        """Write table 1 from the paper."""
+        import pandas as pd
+
+        rv = [
+            ("External registries imported", self.number_registries_aligned),
+            ("Individual resources represented", self.number_prefixes),
+            ("Cross-registry resource mappings", self.number_mappings),
+            ("Contributors", self.number_direct_contributors),
+        ]
+        df = pd.DataFrame(rv, columns=["Category", "Count"])
+        df.to_excel(TABLES_SUMMARY_EXCEL_PATH, index=False)
+
     def _table_df(self):
         import pandas as pd
 
@@ -135,7 +148,7 @@ class BioregistrySummary:
         return cls(
             date=datetime.datetime.now(),
             number_prefixes=len(registry),
-            number_registries=len(metaprefixes),
+            number_registries=len(metaprefixes - {"bioregistry"}),
             number_registries_aligned=len(metaprefixes_aligned),
             number_prefixes_novel=number_novel_prefixes,
             number_mappings=total_mapping_count,
@@ -230,6 +243,7 @@ class MappingBurdenSummary:
 
 
 @click.command()
+@click.option("--split-lines", is_flag=True)
 @click.option("--split-lines", is_flag=True)
 @force_option
 def _main(split_lines: bool, force: bool):

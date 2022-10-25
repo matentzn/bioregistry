@@ -11,8 +11,10 @@ import bioregistry
 from bioregistry.constants import (
     TABLES_GOVERNANCE_LATEX_PATH,
     TABLES_GOVERNANCE_TSV_PATH,
+    TABLES_METADATA_EXCEL_PATH,
     TABLES_METADATA_LATEX_PATH,
     TABLES_METADATA_TSV_PATH,
+    TABLES_SUMMARY_EXCEL_PATH,
     TABLES_SUMMARY_LATEX_PATH,
 )
 from bioregistry.summary import BioregistrySummary
@@ -100,9 +102,9 @@ DATA_MODEL_CAPABILITIES = [
     ("", "Registry"),
     ("Metadata Model", "Name"),
     ("Metadata Model", "Homepage"),
-    ("Metadata Model", "Desc."),
-    ("Metadata Model", "Example ID"),
-    ("Metadata Model", "ID Pattern"),
+    ("Metadata Model", "Description"),
+    ("Metadata Model", "Example LUID"),
+    ("Metadata Model", "LUID Pattern"),
     ("Metadata Model", "Provider"),
     ("Metadata Model", "Alt. Providers"),
     ("Metadata Model", "Alt. Prefixes"),
@@ -111,7 +113,7 @@ DATA_MODEL_CAPABILITIES = [
     ("Metadata Model", "Contact"),
     ("Capabilities and Qualities", "Structured Data"),
     ("Capabilities and Qualities", "Bulk Data"),
-    ("Capabilities and Qualities", "No Auth. for Data"),
+    ("Capabilities and Qualities", "No Auth. Required"),
     ("Capabilities and Qualities", "Permissive License"),
     ("Capabilities and Qualities", "Prefix Search"),
     ("Capabilities and Qualities", "Prefix Provider"),
@@ -161,7 +163,12 @@ def _get_metadata_df() -> pd.DataFrame:
 
 
 @click.command()
-def export_tables():
+@click.option(
+    "--output-excel",
+    is_flag=True,
+    help="Used when making the excel sheet for Nature Scientific Data",
+)
+def export_tables(output_excel: bool):
     """Export tables.
 
     1. TODO: Export data model comparison, see also https://bioregistry.io/related#data-models
@@ -228,6 +235,18 @@ def export_tables():
 
     s = BioregistrySummary.make()
     TABLES_SUMMARY_LATEX_PATH.write_text(s.get_table_latex())
+
+    if output_excel or True:
+        excel_table = metadata_df.copy()
+        excel_table.index = excel_table["", "Registry"].map(lambda s: s.split("~")[0])
+        excel_table["", "Registry"] = excel_table["", "Registry"].map(lambda s: s.split("~")[1])
+        excel_table = excel_table.rename(columns={"Registry": "Citation"})
+        excel_table.index.name = "Registry"
+        excel_table.to_excel(
+            TABLES_METADATA_EXCEL_PATH,
+            encoding="utf-8",
+        )
+        s.write_paper_table_1()
 
 
 if __name__ == "__main__":

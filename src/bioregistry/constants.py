@@ -75,8 +75,10 @@ EXPORT_TABLES = EXPORT_DIRECTORY.joinpath("tables")
 TABLES_GOVERNANCE_TSV_PATH = EXPORT_TABLES.joinpath("comparison_goveranance.tsv")
 TABLES_GOVERNANCE_LATEX_PATH = EXPORT_TABLES.joinpath("comparison_goveranance.tex")
 TABLES_METADATA_TSV_PATH = EXPORT_TABLES.joinpath("comparison_metadata.tsv")
+TABLES_METADATA_EXCEL_PATH = EXPORT_TABLES.joinpath("bioregistry_table_2.xlsx")
 TABLES_METADATA_LATEX_PATH = EXPORT_TABLES.joinpath("comparison_metadata.tex")
 TABLES_SUMMARY_LATEX_PATH = EXPORT_TABLES.joinpath("summary.tex")
+TABLES_SUMMARY_EXCEL_PATH = EXPORT_TABLES.joinpath("bioregistry_table_1.xlsx")
 
 BENCHMARKS = EXPORT_DIRECTORY.joinpath("benchmarks")
 
