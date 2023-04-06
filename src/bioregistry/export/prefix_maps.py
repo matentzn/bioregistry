@@ -4,8 +4,7 @@
 
 import json
 from pathlib import Path
-from textwrap import dedent
-from typing import Iterable, Mapping, Optional
+from typing import Iterable, Mapping, Optional, TYPE_CHECKING
 
 import click
 import curies
@@ -16,6 +15,9 @@ from bioregistry.constants import (
     SHACL_TURTLE_PATH,
 )
 from bioregistry.resource_manager import manager
+
+if TYPE_CHECKING:
+    import rdflib
 
 REVERSE_PREFIX_MAP_PATH = EXPORT_CONTEXTS.joinpath("bioregistry.rpm.json")
 EXTENDED_PREFIX_MAP_PATH = EXPORT_CONTEXTS.joinpath("bioregistry.epm.json")
@@ -77,26 +79,31 @@ def _context_prefix_maps():
             )
 
 
+def get_shacl_graph(
+    prefix_map: Mapping[str, str], pattern_map: Optional[Mapping[str, str]] = None
+) -> "rdflib.Graph":
+    """Get an RDFLib graph containing SHACL."""
+    import rdflib
+
+    graph = rdflib.Graph()
+    graph.bind("sh", rdflib.SH)
+    declarations = rdflib.BNode()
+    for prefix, uri_prefix in sorted(prefix_map.items()):
+        node = rdflib.BNode()
+        graph.add((declarations, rdflib.SH.declare, node))
+        graph.add((node, rdflib.SH.prefix, rdflib.Literal(prefix)))
+        graph.add((node, rdflib.SH.namespace, rdflib.Literal(uri_prefix)))
+        if pattern_map and prefix in pattern_map:
+            graph.add((node, rdflib.SH.pattern, rdflib.Literal(pattern_map[prefix])))
+    return graph
+
+
 def _write_shacl(
     path: Path, *, prefix_map: Mapping[str, str], pattern_map: Optional[Mapping[str, str]] = None
 ) -> None:
-    text = dedent(
-        """\
-        @prefix sh: <http://www.w3.org/ns/shacl#> .
-
-        [
-          sh:declare
-        {entries}
-        ] .
-        """
-    )
-    entries = ",\n".join(
-        f'    [ sh:prefix "{prefix}" ; sh:namespace "{uri_prefix}" ]'
-        if not pattern_map or prefix not in pattern_map
-        else f'    [ sh:prefix "{prefix}" ; sh:namespace "{uri_prefix}" ; sh:pattern "{pattern_map[prefix]}" ]'
-        for prefix, uri_prefix in sorted(prefix_map.items())
-    )
-    path.write_text(text.format(entries=entries))
+    graph = get_shacl_graph(prefix_map=prefix_map, pattern_map=pattern_map)
+    text = graph.serialize(format="ttl")
+    path.write_text(text)
 
 
 def _write_prefix_map(path: Path, *, prefix_map: Mapping[str, str]) -> None:
