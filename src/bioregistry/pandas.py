@@ -10,13 +10,15 @@ with the :func:`get_goa_example` function.
 import functools
 import logging
 import re
-from typing import Dict, Optional, Pattern, Union
+from typing import TYPE_CHECKING, Dict, Optional, Pattern, Union
 
-import pandas as pd
 from tabulate import tabulate
 from tqdm.auto import tqdm
 
 import bioregistry
+
+if TYPE_CHECKING:
+    import pandas as pd
 
 __all__ = [
     "get_goa_example",
@@ -42,8 +44,10 @@ class PrefixLocationError(ValueError):
     """Raised when not exactly one of prefix and prefix_column were given."""
 
 
-def get_goa_example() -> pd.DataFrame:
+def get_goa_example() -> "pd.DataFrame":
     """Get the GOA file."""
+    import pandas as pd
+
     return pd.read_csv(
         "http://geneontology.org/gene-associations/goa_human.gaf.gz",
         sep="\t",
@@ -57,7 +61,7 @@ def _norm_column(df: pd.DataFrame, column: Union[int, str]) -> str:
 
 
 def normalize_prefixes(
-    df: pd.DataFrame, column: Union[int, str], *, target_column: Optional[str] = None
+    df: "pd.DataFrame", column: Union[int, str], *, target_column: Optional[str] = None
 ) -> None:
     """Normalize prefixes in a given column.
 
@@ -84,7 +88,7 @@ def normalize_prefixes(
 
 
 def normalize_curies(
-    df: pd.DataFrame, column: Union[int, str], *, target_column: Optional[str] = None
+    df: "pd.DataFrame", column: Union[int, str], *, target_column: Optional[str] = None
 ) -> None:
     """Normalize CURIEs in a given column.
 
@@ -122,8 +126,14 @@ def normalize_curies(
     df[target_column] = df[column].map(bioregistry.normalize_curie, na_action="ignore")
 
 
+def normalize_identifiers(
+    df: "pd.DataFrame", column: Union[int, str], *, target_column: Optional[str] = None
+):
+    pass
+
+
 def validate_prefixes(
-    df: pd.DataFrame, column: Union[int, str], *, target_column: Optional[str] = None
+    df: "pd.DataFrame", column: Union[int, str], *, target_column: Optional[str] = None
 ) -> pd.Series:
     """Validate prefixes in a given column.
 
@@ -156,7 +166,7 @@ def validate_prefixes(
     return results
 
 
-def summarize_prefix_validation(df: pd.DataFrame, idx: pd.Series) -> None:
+def summarize_prefix_validation(df: "pd.DataFrame", idx: pd.Series) -> None:
     """Provide a summary of prefix validation."""
     # TODO add suggestions on what to do next, e.g.:,
     #  1. can some be normalized? use normalization function
@@ -185,7 +195,7 @@ def summarize_prefix_validation(df: pd.DataFrame, idx: pd.Series) -> None:
 
 
 def validate_curies(
-    df: pd.DataFrame, column: Union[int, str], *, target_column: Optional[str] = None
+    df: "pd.DataFrame", column: Union[int, str], *, target_column: Optional[str] = None
 ) -> pd.Series:
     """Validate CURIEs in a given column.
 
@@ -218,7 +228,7 @@ def validate_curies(
     return results
 
 
-def summarize_curie_validation(df, idx) -> None:
+def summarize_curie_validation(df: "pd.DataFrame", idx) -> None:
     """Provide a summary of CURIE validation."""
     count = (~idx).sum()
     unique = sorted(df[~idx][0].unique())
@@ -230,14 +240,14 @@ def summarize_curie_validation(df, idx) -> None:
 
 
 def validate_identifiers(
-    df: pd.DataFrame,
+    df: "pd.DataFrame",
     column: Union[int, str],
     *,
     prefix: Optional[str] = None,
     prefix_column: Optional[str] = None,
     target_column: Optional[str] = None,
     use_tqdm: bool = False,
-) -> pd.Series:
+) -> "pd.Series":
     """Validate local unique identifiers in a given column.
 
     Some data sources split the prefix and identifier in separate columns,
@@ -316,7 +326,7 @@ def validate_identifiers(
     return results
 
 
-def _help_validate_identifiers(df, column, prefix):
+def _help_validate_identifiers(df: "pd.DataFrame", column, prefix) -> "pd.Series":
     norm_prefix = bioregistry.normalize_prefix(prefix)
     if norm_prefix is None:
         raise ValueError(
@@ -335,7 +345,7 @@ def _help_validate_identifiers(df, column, prefix):
 
 
 def identifiers_to_curies(
-    df: pd.DataFrame,
+    df: "pd.DataFrame",
     column: Union[int, str],
     *,
     prefix: Optional[str] = None,
