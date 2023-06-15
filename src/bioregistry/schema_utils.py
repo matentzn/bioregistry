@@ -5,7 +5,6 @@
 import json
 import logging
 from collections import defaultdict
-from functools import lru_cache
 from operator import attrgetter
 from pathlib import Path
 from typing import List, Mapping, Optional, Set, Union
@@ -23,7 +22,6 @@ from .utils import extended_encoder
 logger = logging.getLogger(__name__)
 
 
-@lru_cache(maxsize=1)
 def read_metaregistry() -> Mapping[str, Registry]:
     """Read the metaregistry."""
     return _read_metaregistry(METAREGISTRY_PATH)
@@ -43,7 +41,6 @@ def registries() -> List[Registry]:
     return sorted(read_metaregistry().values(), key=attrgetter("prefix"))
 
 
-@lru_cache(maxsize=1)
 def read_registry() -> Mapping[str, Resource]:
     """Read the Bioregistry as JSON."""
     return _registry_from_path(BIOREGISTRY_PATH)
@@ -77,7 +74,6 @@ def add_resource(resource: Resource) -> None:
     write_registry(registry)
 
 
-@lru_cache(maxsize=1)
 def read_mismatches() -> Mapping[str, Mapping[str, str]]:
     """Read the mismatches as JSON."""
     with MISMATCH_PATH.open() as file:
@@ -103,7 +99,6 @@ def write_mismatches(mismatches: Mapping[str, Mapping[str, str]]) -> None:
     )
 
 
-@lru_cache(maxsize=1)
 def read_collections() -> Mapping[str, Collection]:
     """Read the manually curated collections."""
     return _collections_from_path(COLLECTIONS_PATH)

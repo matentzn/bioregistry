@@ -21,13 +21,12 @@ RAW_PATH = DIRECTORY / "raw.yaml"
 PROCESSED_PATH = DIRECTORY / "processed.json"
 
 
-# FIXME this isn't the real prefix commons
 def get_biolink(force_download: bool = False):
     """Get Biolink."""
     if PROCESSED_PATH.exists() and not force_download:
         with PROCESSED_PATH.open() as file:
             return json.load(file)
-    download(url=URL, path=RAW_PATH, force=True)
+    download(url=URL, path=RAW_PATH, force=force_download)
     with RAW_PATH.open() as file:
         data = yaml.safe_load(file)
     rv = {

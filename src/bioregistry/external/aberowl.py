@@ -27,7 +27,7 @@ def get_aberowl(force_download: bool = False):
         with PROCESSED_PATH.open() as file:
             return json.load(file)
 
-    download(url=ABEROWL_URL, path=RAW_PATH, force=True)
+    download(url=ABEROWL_URL, path=RAW_PATH, force=force_download)
     with RAW_PATH.open() as file:
         entries = yaml.full_load(file)
     rv = {entry["acronym"]: _process(entry) for entry in entries}

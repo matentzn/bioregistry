@@ -30,7 +30,7 @@ def get_cellosaurus(force_download: bool = False, keep_missing_uri: bool = True)
         with PROCESSED_PATH.open() as file:
             return json.load(file)
 
-    download(url=URL, path=RAW_PATH, force=True)
+    download(url=URL, path=RAW_PATH, force=force_download)
     with RAW_PATH.open(encoding="ISO8859-1") as file:
         lines = [line.rstrip() for line in file]
 

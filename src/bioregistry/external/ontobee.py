@@ -28,7 +28,7 @@ def get_ontobee(force_download: bool = False):
         with PROCESSED_PATH.open() as file:
             return json.load(file)
 
-    download(url=URL, path=RAW_PATH, force=True)
+    download(url=URL, path=RAW_PATH, force=force_download)
     with RAW_PATH.open() as f:
         soup = BeautifulSoup(f, "html.parser")
 

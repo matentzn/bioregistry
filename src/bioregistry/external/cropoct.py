@@ -31,7 +31,7 @@ def get_cropoct(force_download: bool = False):
         with PROCESSED_PATH.open() as file:
             return json.load(file)
 
-    download(url=CROPOCT_URL, path=RAW_PATH, force=True)
+    download(url=CROPOCT_URL, path=RAW_PATH, force=force_download)
 
     lines = []
     with RAW_PATH.open() as file:

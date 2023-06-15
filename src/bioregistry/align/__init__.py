@@ -64,7 +64,7 @@ __all__ = [
     "BartocAligner",
 ]
 
-aligner_resolver = ClassResolver.from_subclasses(
+aligner_resolver: ClassResolver[Aligner] = ClassResolver.from_subclasses(
     base=Aligner,
     skip={OntoPortalAligner},
 )

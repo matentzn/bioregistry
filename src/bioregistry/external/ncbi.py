@@ -22,7 +22,6 @@ logger = logging.getLogger(__name__)
 
 DIRECTORY = EXTERNAL / "ncbi"
 DIRECTORY.mkdir(exist_ok=True, parents=True)
-RAW_PATH = DIRECTORY / "raw.html"
 PROCESSED_PATH = DIRECTORY / "processed.json"
 URL = "https://www.ncbi.nlm.nih.gov/genbank/collab/db_xref/"
 NCBI_URL_PARTS = urlsplit(URL)
@@ -59,9 +58,9 @@ def get_ncbi(force_download: bool = False) -> Dict[str, Dict[str, str]]:
         with PROCESSED_PATH.open() as file:
             return json.load(file)
 
-    download(url=URL, path=RAW_PATH, force=True)
+    res = requests.get(URL)
     with RAW_PATH.open() as file:
-        soup = BeautifulSoup(file, "html.parser")
+        soup = BeautifulSoup(res.content, "html.parser")
     # find the data table based on its caption element
     data_table = soup.find("caption", string=DATA_TABLE_CAPTION_RE).parent
 
