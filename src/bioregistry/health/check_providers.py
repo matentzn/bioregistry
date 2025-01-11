@@ -16,7 +16,7 @@ from tqdm.contrib.logging import logging_redirect_tqdm
 
 import bioregistry
 from bioregistry.constants import DOCS_DATA
-from bioregistry.utils import secho
+from bioregistry.utils import pydantic_dict, secho
 
 __all__ = [
     "main",
@@ -28,13 +28,13 @@ HEALTH_YAML_PATH = DOCS_DATA.joinpath("health.yaml")
 class ProviderStatus(BaseModel):
     """A container for provider information."""
 
-    prefix: str
-    example: str
-    url: str
-    status_code: Optional[int]
-    failed: bool
-    exception: Optional[str]
-    context: Optional[str]
+    prefix: str = Field(...)
+    example: str = Field(...)
+    url: str = Field(...)
+    status_code: Optional[int] = Field(None)
+    failed: bool = Field(...)
+    exception: Optional[str] = Field(None)
+    context: Optional[str] = Field(None)
 
 
 class Summary(BaseModel):
@@ -43,6 +43,12 @@ class Summary(BaseModel):
     total_measured: int
     total_failed: int
     total_success: int
+    success_percent: float = Field(
+        ...,
+        ge=0.0,
+        le=100.0,
+        description="The percentage of providers that successfully ping'd.",
+    )
     failure_percent: float = Field(
         ...,
         ge=0.0,
@@ -78,7 +84,9 @@ class Run(BaseModel):
     date: str = Field(default_factory=lambda: datetime.datetime.now().strftime("%Y-%m-%d"))
     results: List[ProviderStatus]
     summary: Summary
-    delta: Optional[Delta] = Field(description="Information about the changes since the last run")
+    delta: Optional[Delta] = Field(
+        None, description="Information about the changes since the last run"
+    )
 
 
 class Database(BaseModel):
@@ -144,13 +152,14 @@ def main() -> None:
             total_failed=total_failed,
             total_success=total - total_failed,
             failure_percent=round(100 * failure_percent, 1),
+            success_percent=round(100 * (1 - failure_percent), 1),
         ),
         delta=delta,
     )
     database.runs.append(current_run)
     database.runs = sorted(database.runs, key=attrgetter("time"), reverse=True)
 
-    HEALTH_YAML_PATH.write_text(yaml.safe_dump(database.dict(exclude_none=True)))
+    HEALTH_YAML_PATH.write_text(yaml.safe_dump(pydantic_dict(database, exclude_none=True)))
     click.echo(f"Wrote to {HEALTH_YAML_PATH}")
 
 

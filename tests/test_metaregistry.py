@@ -10,6 +10,7 @@ import bioregistry
 from bioregistry import manager
 from bioregistry.export.rdf_export import metaresource_to_rdf_str
 from bioregistry.schema import Registry
+from bioregistry.utils import pydantic_dict, pydantic_fields
 
 
 class TestMetaregistry(unittest.TestCase):
@@ -23,10 +24,17 @@ class TestMetaregistry(unittest.TestCase):
         """Test the metaregistry entries have a minimum amount of data."""
         for metaprefix, registry in self.manager.metaregistry.items():
             self.assertIsInstance(registry, Registry)
+            external_prefixes = set(self.manager.get_registry_invmap(metaprefix))
             with self.subTest(metaprefix=metaprefix):
                 self.assertIsNotNone(registry.name)
                 self.assertIsNotNone(registry.homepage)
                 self.assertIsNotNone(registry.example)
+                if metaprefix != "bioregistry" and external_prefixes:
+                    self.assertIn(
+                        registry.example,
+                        external_prefixes,
+                        msg="Examples should be external-registry specific and mapped",
+                    )
                 self.assertIsNotNone(registry.description)
                 self.assertIsNotNone(registry.contact)
                 self.assertIsNotNone(registry.license, msg=f"Contact: {registry.contact}")
@@ -74,7 +82,7 @@ class TestMetaregistry(unittest.TestCase):
                     self.assertIsNotNone(registry.resolver_type)
                     self.assertIn(registry.resolver_type, {"lookup", "resolver"})
 
-                invalid_keys = set(registry.dict()).difference(Registry.__fields__)
+                invalid_keys = set(pydantic_dict(registry)).difference(pydantic_fields(Registry))
                 self.assertEqual(set(), invalid_keys, msg="invalid metadata")
                 self.assertIsNotNone(registry.qualities)
                 self.assertIsInstance(registry.qualities.bulk_data, bool)

@@ -3,7 +3,7 @@
 """Schema constants."""
 
 from dataclasses import dataclass, field
-from typing import List, Mapping, Optional, Union
+from typing import TYPE_CHECKING, List, Mapping, Optional, Union
 
 import rdflib.namespace
 from rdflib import (
@@ -23,6 +23,11 @@ from rdflib import (
     URIRef,
 )
 from rdflib.term import Node
+
+if TYPE_CHECKING:
+    import networkx
+
+    import bioregistry.resource_manager
 
 __all__ = [
     "bioregistry_schema_terms",
@@ -192,7 +197,8 @@ bioregistry_schema_terms = [
         "Property",
         "has canonical",
         "A property connecting two prefixes that share an IRI where the subject is "
-        "the non-preferred prefix and the target is the preferred prefix",
+        "the non-preferred prefix and the target is the preferred prefix. "
+        "See examples [here](https://bioregistry.io/highlights/relations#canonical).",
         domain="0000001",
         range="0000001",
     ),
@@ -339,7 +345,7 @@ bioregistry_class_to_id: Mapping[str, URIRef] = {
 orcid = rdflib.namespace.Namespace("https://orcid.org/")
 
 
-def _graph(manager=None) -> rdflib.Graph:
+def _graph(manager: Optional["bioregistry.resource_manager.Manager"] = None) -> rdflib.Graph:
     graph = rdflib.Graph()
     graph.namespace_manager.bind("bioregistry", bioregistry_resource)
     graph.namespace_manager.bind("bioregistry.metaresource", bioregistry_metaresource)
@@ -372,7 +378,7 @@ def get_schema_rdf() -> rdflib.Graph:
     return graph
 
 
-def _add_schema(graph):
+def _add_schema(graph: rdflib.Graph) -> rdflib.Graph:
     for term in bioregistry_schema_terms:
         node = bioregistry_schema[term.identifier]
         if isinstance(term, ClassTerm):
@@ -403,7 +409,7 @@ def _add_schema(graph):
     return graph
 
 
-def get_schema_nx():
+def get_schema_nx() -> "networkx.MultiDiGraph":
     """Get the schema as a networkx multidigraph."""
     import networkx as nx
 

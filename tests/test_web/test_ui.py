@@ -2,6 +2,8 @@
 
 """Test for web."""
 
+from __future__ import annotations
+
 import json
 import unittest
 
@@ -179,10 +181,39 @@ class TestUI(unittest.TestCase):
         """Test healthy redirects."""
         with self.app.test_client() as client:
             for endpoint in [
-                "metaregistry/miriam/chebi:24867",
-                "chebi:24867",
-                "health/go",
+                "/metaregistry/miriam/chebi:24867",
+                "/chebi:24867",
+                "/ark:53355/cl010066723",
+                "/ark:/53355/cl010066723",  # test if slash at beginning of luid works
+                "/foaf:test/nope",  # test if slash in middle of luid works
+                # this isn't a real FOAF term, but it's just to make sure that the resolver
+                # doesn't blow up on a local unique identifier that has a colon inside it
+                # i.e., foaf should still get properly recognized
+                "/foaf:test:case",
+                "/foaf:test:case:2",
+                "/health/go",
             ]:
                 with self.subTest(endpoint=endpoint):
                     res = client.get(endpoint, follow_redirects=False)
-                    self.assertEqual(302, res.status_code)
+                    self.assertEqual(302, res.status_code)  # , msg=res.text)
+
+    def test_redirect_404(self):
+        """Test 404 errors."""
+        with self.app.test_client() as client:
+            for endpoint in [
+                "/chebi:abcd",  # wrong identifier pattern
+                "/gmelin:1234",  # no providers
+            ]:
+                with self.subTest(endpoint=endpoint):
+                    res = client.get(endpoint, follow_redirects=False)
+                    self.assertEqual(404, res.status_code)
+
+    def test_reference_page(self):
+        """Test the reference page."""
+        with self.app.test_client() as client:
+            for endpoint in [
+                "/reference/ctri:CTRI/2023/04/052053",  # check that slashes are okay
+            ]:
+                with self.subTest(endpoint=endpoint):
+                    res = client.get(endpoint, follow_redirects=False)
+                    self.assertEqual(200, res.status_code)

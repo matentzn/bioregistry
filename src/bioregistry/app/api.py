@@ -2,14 +2,16 @@
 
 """FastAPI blueprint and routes."""
 
+from __future__ import annotations
+
 from typing import Any, List, Mapping, Optional, Set
 
 import yaml
 from curies import Reference
 from curies.mapping_service.utils import handle_header
-from fastapi import APIRouter, Header, HTTPException, Path, Query, Request
+from fastapi import APIRouter, Body, Header, HTTPException, Path, Query, Request
 from fastapi.responses import JSONResponse, Response
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from bioregistry import Collection, Context, Registry, Resource
 from bioregistry.export.rdf_export import (
@@ -27,6 +29,7 @@ from bioregistry.schema_utils import (
 )
 
 from .utils import FORMAT_MAP, _autocomplete, _search
+from ..utils import pydantic_dict
 
 __all__ = [
     "api_router",
@@ -38,7 +41,7 @@ api_router = APIRouter(prefix="/api")
 class UnhandledFormat(HTTPException):
     """An exception for an unhandled format."""
 
-    def __init__(self, fmt):
+    def __init__(self, fmt: str) -> None:
         """Instantiate the exception.
 
         :param fmt: The header that was bad
@@ -54,7 +57,8 @@ class YAMLResponse(Response):
     def render(self, content: Any) -> bytes:
         """Render content as YAML."""
         if isinstance(content, BaseModel):
-            content = content.dict(
+            content = pydantic_dict(
+                content,
                 exclude_none=True,
                 exclude_unset=True,
             )
@@ -135,10 +139,10 @@ def get_resources(
 def get_resource(
     request: Request,
     prefix: str = Path(
-        title="Prefix", description="The Bioregistry prefix for the entry", example="doid"
+        title="Prefix", description="The Bioregistry prefix for the entry", examples=["doid"]
     ),
-    accept: Optional[str] = ACCEPT_HEADER,
-    format: Optional[str] = FORMAT_QUERY,
+    accept: str = ACCEPT_HEADER,
+    format: str = FORMAT_QUERY,
 ):
     """Get a resource."""
     resource = request.app.manager.get_resource(prefix)
@@ -185,7 +189,7 @@ def get_metaresources(
 METAPREFIX_PATH = Path(
     title="Metaprefix",
     description="The Bioregistry metaprefix for the external registry",
-    example="n2t",
+    examples=["n2t"],
 )
 
 
@@ -208,8 +212,8 @@ METAPREFIX_PATH = Path(
 def get_metaresource(
     request: Request,
     metaprefix: str = METAPREFIX_PATH,
-    accept: Optional[str] = ACCEPT_HEADER,
-    format: Optional[str] = FORMAT_QUERY,
+    accept: str = ACCEPT_HEADER,
+    format: str = FORMAT_QUERY,
 ):
     """Get all registries."""
     manager = request.app.manager
@@ -353,7 +357,7 @@ def get_collection(
     identifier: str = Path(
         title="Collection Identifier",
         description="The 7-digit collection identifier",
-        example="0000001",
+        examples=["0000001"],
     ),
     accept: Optional[str] = ACCEPT_HEADER,
     format: Optional[str] = FORMAT_QUERY,
@@ -402,7 +406,7 @@ def get_contexts(
 @api_router.get("/context/{identifier}", response_model=Context, tags=["context"])
 def get_context(
     request: Request,
-    identifier: str = Path(title="Context Key", description="The context key", example="obo"),
+    identifier: str = Path(title="Context Key", description="The context key", examples=["obo"]),
 ):
     """Get a context."""
     context = request.app.manager.contexts.get(identifier)
@@ -466,10 +470,12 @@ class IdentifierResponse(BaseModel):
 
 
 @api_router.get(
-    "/reference/{prefix}:{identifier}", response_model=IdentifierResponse, tags=["reference"]
+    "/reference/{prefix}:{identifier:path}", response_model=IdentifierResponse, tags=["reference"]
 )
 def get_reference(request: Request, prefix: str, identifier: str):
     """Look up information on the reference."""
+    # see https://fastapi.tiangolo.com/tutorial/path-params/#path-parameters-containing-paths
+    # for more understanding on how the identifier:path handling works
     manager = request.app.manager
     resource = manager.get_resource(prefix)
     if resource is None:
@@ -478,7 +484,7 @@ def get_reference(request: Request, prefix: str, identifier: str):
     if not resource.is_standardizable_identifier(identifier):
         raise HTTPException(
             404,
-            f"invalid identifier: {resource.get_curie(identifier)} for pattern {resource.get_pattern(prefix)}",
+            f"invalid identifier: {resource.get_curie(identifier)} for pattern {resource.get_pattern()}",
         )
 
     providers = manager.get_providers(resource.prefix, identifier)
@@ -488,6 +494,55 @@ def get_reference(request: Request, prefix: str, identifier: str):
     return IdentifierResponse(
         query=Reference(prefix=prefix, identifier=identifier),
         providers=providers,
+    )
+
+
+class URIResponse(BaseModel):
+    """A response for looking up a reference."""
+
+    uri: str = Field(
+        ..., description="The query URI", examples=["http://id.nlm.nih.gov/mesh/C063233"]
+    )
+    reference: Reference = Field(
+        ...,
+        description="The compact URI (CURIE)",
+        examples=[Reference(prefix="mesh", identifier="C063233")],
+    )
+    providers: Mapping[str, str] = Field(
+        ...,
+        description="Equivalent URIs",
+        examples=[
+            {
+                "default": "https://meshb.nlm.nih.gov/record/ui?ui=C063233",
+                "rdf": "http://id.nlm.nih.gov/mesh/C063233",
+            }
+        ],
+    )
+
+
+class URIQuery(BaseModel):
+    """A query for parsing a URI."""
+
+    uri: str = Field(..., examples=["http://id.nlm.nih.gov/mesh/C063233"])
+
+
+@api_router.post(
+    "/uri/parse/", response_model=URIResponse, tags=["reference"], summary="Parse a URI"
+)
+def post_parse_uri(
+    request: Request,
+    query: URIQuery = Body(..., examples=[URIQuery(uri="http://id.nlm.nih.gov/mesh/C063233")]),
+):
+    """Parse a URI, return a CURIE, and all equivalent URIs."""
+    manager = request.app.manager
+    prefix, identifier = manager.parse_uri(query.uri)
+    if prefix is None:
+        raise HTTPException(404, f"can't parse URI: {query.uri}")
+    return URIResponse(
+        uri=query.uri,
+        reference=Reference(prefix=prefix, identifier=identifier),
+        # Given the fact that we're able to parse the URI, there must be at least one provider
+        providers=manager.get_providers(prefix, identifier),
     )
 
 

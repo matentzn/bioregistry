@@ -18,9 +18,12 @@ __all__ = [
     "COLLECTIONS_PATH",
     "MISMATCH_PATH",
     "BIOREGISTRY_MODULE",
+    "RAW_DIRECTORY",
 ]
 
 PYDANTIC_1 = importlib.metadata.version("pydantic").startswith("1.")
+PATTERN_KEY = "regex" if PYDANTIC_1 else "pattern"
+ORCID_PATTERN = r"^\d{4}-\d{4}-\d{4}-\d{3}(\d|X)$"
 
 HERE = pathlib.Path(os.path.abspath(os.path.dirname(__file__)))
 DATA_DIRECTORY = HERE / "data"
@@ -30,6 +33,7 @@ METAREGISTRY_PATH = DATA_DIRECTORY / "metaregistry.json"
 COLLECTIONS_PATH = DATA_DIRECTORY / "collections.json"
 MISMATCH_PATH = DATA_DIRECTORY / "mismatch.json"
 CONTEXTS_PATH = DATA_DIRECTORY / "contexts.json"
+CURATED_PAPERS_PATH = DATA_DIRECTORY / "curated_papers.tsv"
 
 BIOREGISTRY_MODULE = pystow.module("bioregistry")
 
@@ -40,6 +44,8 @@ DOCS_IMG = DOCS.joinpath("img")
 
 EXPORT_DIRECTORY = ROOT.joinpath("exports")
 
+METADATA_CURATION_DIRECTORY = EXPORT_DIRECTORY.joinpath("alignment")
+RAW_DIRECTORY = EXPORT_DIRECTORY.joinpath("raw")
 EXPORT_CONTEXTS = EXPORT_DIRECTORY / "contexts"
 CONTEXT_BIOREGISTRY_PATH = EXPORT_CONTEXTS / "bioregistry.context.jsonld"
 SHACL_TURTLE_PATH = EXPORT_CONTEXTS / "bioregistry.context.ttl"
@@ -124,6 +130,8 @@ MIRIAM_BLACKLIST = {
     "pid.pathway",
     # this uses namespace-in-namespace
     "neurolex",
+    # Miriam needs to be extended
+    "ccds",
 }
 IDENTIFIERS_ORG_URL_PREFIX = "https://identifiers.org/"
 

@@ -5,13 +5,13 @@ from pathlib import Path
 from textwrap import dedent
 from typing import TYPE_CHECKING, Any, Mapping, Optional, Union
 
+from a2wsgi import WSGIMiddleware
 from curies.mapping_service import MappingServiceGraph, MappingServiceSPARQLProcessor
 from fastapi import APIRouter, FastAPI
 from flask import Flask
 from flask_bootstrap import Bootstrap4
 from markdown import markdown
 from rdflib_endpoint import SparqlRouter
-from starlette.middleware.wsgi import WSGIMiddleware
 
 from bioregistry import curie_to_str, resource_manager, version
 
@@ -36,9 +36,10 @@ DESCRIPTION_DEFAULT = dedent(
 )
 FOOTER_DEFAULT = dedent(
     """\
-    Developed with ❤️ by the <a href="https://indralab.github.io">INDRA Lab</a> in the
-    <a href="https://hits.harvard.edu">Harvard Program in Therapeutic Science (HiTS)</a>.<br/>
-    Funded by the DARPA Young Faculty Award W911NF2010255 (PI: Benjamin M. Gyori).<br/>
+    Developed with ❤️ by the <a href="https://gyorilab.github.io">Gyori Lab for Computational Biomedicine</a>
+    at Northeastern University.<br/>
+    Funded by Chan Zuckerberg Initiative (CZI) Award
+    <a href="https://gyorilab.github.io/#czi-bioregistry">2023-329850</a>.<br/>
     Point of contact: <a href="https://github.com/cthoyt">@cthoyt</a>.
     (<a href="https://github.com/biopragmatics/bioregistry">Source code</a>)
 """
